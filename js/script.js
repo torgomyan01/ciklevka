@@ -77,3 +77,26 @@ $('#menu-go-prev').on('click', function (){
     $('#sub-modal-block').html('');
 });
 
+
+
+
+
+
+
+// --------- OUR SERVICES ------------------
+const btnOpenCloseText = $('.our-services .open-close-text');
+const textBlock = $('.our-services .text-block');
+
+const tenBlock = $('.our-services .text-block .ten');
+
+btnOpenCloseText.on('click', function (){
+    if(textBlock.hasClass('close')){
+        textBlock.removeClass('close');
+        $(this).removeClass('close');
+        tenBlock.addClass('d-none');
+    } else {
+        textBlock.addClass('close');
+        $(this).addClass('close');
+        tenBlock.removeClass('d-none');
+    }
+})

@@ -2017,24 +2017,9 @@ header {
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
 
-.restoration-treatment-floors .restoration-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  @media (max-width: 992px) {
-    .restoration-treatment-floors .restoration-block {
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
-  .restoration-treatment-floors .restoration-block .item {
+.restoration-treatment-floors {
+  margin-top: 100px; }
+  .restoration-treatment-floors .restoration-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2044,39 +2029,66 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 402px;
-    height: 751px;
-    border-radius: 25px;
-    background-color: #f3f2f2;
-    margin-right: 20px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 40px;
-    margin-top: 15px; }
-    @media (max-width: 768px) {
-      .restoration-treatment-floors .restoration-block .item:nth-of-type(3), .restoration-treatment-floors .restoration-block .item:nth-of-type(4) {
-        display: none; } }
-    @media (max-width: 576px) {
-      .restoration-treatment-floors .restoration-block .item {
-        width: 100%;
-        height: auto;
-        margin-right: 0; }
-        .restoration-treatment-floors .restoration-block .item .btn-call-green, .restoration-treatment-floors .restoration-block .item .btn-grey-large {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    @media (max-width: 992px) {
+      .restoration-treatment-floors .restoration-block {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .restoration-treatment-floors .restoration-block .item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 402px;
+      height: 751px;
+      border-radius: 25px;
+      background-color: #f3f2f2;
+      margin-right: 20px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      margin-top: 50px;
+      position: relative; }
+      .restoration-treatment-floors .restoration-block .item .view-we-works {
+        position: absolute;
+        bottom: -30px;
+        color: #a37b51; }
+      @media (max-width: 768px) {
+        .restoration-treatment-floors .restoration-block .item {
+          margin-top: 80px; }
+          .restoration-treatment-floors .restoration-block .item:nth-of-type(3), .restoration-treatment-floors .restoration-block .item:nth-of-type(4) {
+            display: none; } }
+      @media (max-width: 576px) {
+        .restoration-treatment-floors .restoration-block .item {
           width: 100%;
-          height: 70px;
-          margin-top: 15px;
-          border-radius: 60px; } }
-    .restoration-treatment-floors .restoration-block .item .title {
-      text-decoration: underline !important;
-      font-weight: 600; }
-    .restoration-treatment-floors .restoration-block .item ul {
-      list-style: none;
-      padding: 0; }
+          height: auto;
+          margin-right: 0; }
+          .restoration-treatment-floors .restoration-block .item .btn-call-green, .restoration-treatment-floors .restoration-block .item .btn-grey-large {
+            width: 100%;
+            height: 70px;
+            margin-top: 15px;
+            border-radius: 60px; } }
+      @media (max-width: 425px) {
+        .restoration-treatment-floors .restoration-block .item {
+          padding: 25px; } }
+      .restoration-treatment-floors .restoration-block .item .title {
+        text-decoration: underline !important;
+        font-weight: 600; }
+      .restoration-treatment-floors .restoration-block .item ul {
+        list-style: none;
+        padding: 0; }
 
 .price-btn {
   background: #fff;

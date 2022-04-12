@@ -18,7 +18,7 @@ class forComponent {
                             const key = objProps[0].replace(/ /g, '');
                             const val = objProps[1];
                             const reg = new RegExp(`{{${key}}}`, 'g');
-                            ConvertedHtml = ConvertedHtml.replace(reg, val === `''` ? '' : val);
+                            ConvertedHtml = ConvertedHtml.replace(reg, val === `''` ? `` : val);
                         })
                         component.outerHTML = `<!---- THIS COMPONENT URL ${src} -->${ConvertedHtml}`;
                     });
@@ -70,7 +70,7 @@ class forComponent {
                     for (let key in data){
                         const keyArr = data[key].split(',');
                         const reg = new RegExp(`{{${key}}}`, 'g');
-                        _htm =  _htm.replace(reg, keyArr[i]);
+                        _htm =  _htm.replace(reg, keyArr[i] === `''` ? '' : keyArr[i]);
                     }
                     _html += _htm + '\n';
                 }

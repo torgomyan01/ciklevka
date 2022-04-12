@@ -1,0 +1,121 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-after {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  border: 2px solid white;
+  @media (max-width: 768px){
+    height: 400px;
+  }
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 900px auto;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    @media (max-width: 576px){
+      background-size: 600px auto;
+    }
+  }
+  .foreground-img {
+    width: 50%;
+    overflow: hidden;
+  }
+  .to, .from{
+    width: 100px;
+    height: 45px;
+    border-radius: 7px;
+    filter: drop-shadow(0 0 38px rgba(40,39,40,0.15));
+    background-color: #ffffff;
+    @include center;
+  }
+  .from{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+  .to{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
+
+  .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(#f2f2f2, .3);
+    outline: none;
+    margin: 0;
+    transition: all .2s;
+    @include center;
+    &:hover {
+      background: rgba(#f2f2f2, .1);
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 6px;
+      height: 600px;
+      background: white;
+      cursor: pointer;
+      position: relative;
+      left: 5px;
+    }
+    &::-moz-range-thumb {
+      width: 6px;
+      height: 600px;
+      background: white;
+      cursor: pointer;
+    }
+  }
+
+  .slider-button {
+    $size: 80px;
+    pointer-events: none;
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: rgba(163, 123, 81, 0.34);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include center;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    i{
+      margin: 3px;
+    }
+    .ten, .ten2{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #a37b51;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    .ten{
+      width: 60px;
+      height: 60px;
+      @include center;
+    }
+    .ten1{
+      width: 40px;
+      height: 40px;
+      @include center;
+    }
+  }
+}

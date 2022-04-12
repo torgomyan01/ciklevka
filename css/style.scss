@@ -6,6 +6,9 @@
   outline: none;
   font-family: 'Inter', sans-serif;
 }
+
+@import "after-before";
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
@@ -24,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
   } @else if $type == 'sa' {
     @return space-around;
   }
+}
+
+@mixin row($num){
+  width: calc((100% / 12) * #{$num});
 }
 
 @mixin flex($x, $y){
@@ -49,7 +56,6 @@ $fontMedia: ("1024": 1.15,  "992": 1.20,  "768": 1.25,  "576": 1.30, "320": 1.35
         font-size: #{$size / $num}px;
       }
     }
-
   }
 }
 
@@ -679,20 +685,25 @@ header{
       justify-content: center;
     }
     .item{
-      width: 400px;
+      width: calc((100% / 4) - 20px);
       height: 332px;
-      margin-right: 15px;
-      margin-top: 15px;
+      margin: 15px 10px 0;
       border-radius: 25px;
-      background-position: center center;
+      background-position: 100% 10%;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       padding: 50px;
+      @media (max-width: 1440px) {
+        width: calc((100% / 3) - 20px);
+      }
+      @media (max-width: 1300px) {
+        width: calc((100% / 2) - 20px);
+      }
       @media (max-width: 768px) {
+        width: calc((100% / 1) - 20px);
         margin-right: 0;
       }
       @media (max-width: 576px) {
-        width: 320px;
         height: 270px;
       }
     }
@@ -848,6 +859,7 @@ header{
 
 .restoration-treatment-floors{
   margin-top: 100px;
+  margin-bottom: 50px;
   .restoration-block{
     @include flex('sb', 'c');
     flex-wrap: wrap;
@@ -859,27 +871,33 @@ header{
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      width: 402px;
+      width: calc((100% / 4 ) - 20px);
       height: 751px;
       border-radius: 25px;
       background-color: #f3f2f2;
-      margin-right: 20px;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       padding: 40px;
-      margin-top: 50px;
+      margin: 50px 10px 0;
       position: relative;
       .view-we-works{
         position: absolute;
         bottom: -30px;
         color: $c-grey;
       }
+      @media (max-width: 1440px) {
+        width: calc((100% / 3 ) - 20px);
+      }
+      @media (max-width: 1100px) {
+        width: calc((100% / 2 ) - 20px);
+      }
       @media (max-width: 768px) {
         &:nth-of-type(3), &:nth-of-type(4){
           display: none;
         }
         margin-top: 80px;
+        width: calc((100% / 1 ) - 20px);
       }
 
       @media (max-width: 576px){
@@ -913,6 +931,49 @@ header{
   border-radius: 10px;
 }
 
+.installation-installation-floors{
+  width: 100%;
+  margin-top: 100px;
+  .installation-floors-body{
+    margin-top: 30px;
+    @include flex('sb', 'c');
+    flex-wrap: wrap;
+    @media (max-width: 1220px){
+      justify-content: center;
+    }
+    .item {
+      width: calc((100% / 3) - 20px);
+      height: 350px;
+      border-radius: 25px;
+      background-color: #f3f2f2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding: 40px 30px;
+      margin: 30px 10px 0 10px;
+      @media (max-width: 1200px){
+        width: calc((100% / 2) - 20px);
+      }
+      @media (max-width: 768px){
+        width: 100%;
+        margin: 30px 0 0 0;
+      }
+      .title{
+        text-decoration: underline !important;
+        color: #282728;
+        font-weight: 600;
+      }
+    }
+  }
+}
 
 
-
+.after-before-item{
+  @include flex('c', 'c');
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .container-after{
+    border-radius: 50px;
+    overflow: hidden;
+  }
+}

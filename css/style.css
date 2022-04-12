@@ -7,6 +7,149 @@
   outline: none;
   font-family: 'Inter', sans-serif; }
 
+.container-after {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  border: 2px solid white; }
+  @media (max-width: 768px) {
+    .container-after {
+      height: 400px; } }
+  .container-after .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 900px auto;
+    background-position: 0 50%;
+    background-repeat: no-repeat; }
+    @media (max-width: 576px) {
+      .container-after .img {
+        background-size: 600px auto; } }
+  .container-after .foreground-img {
+    width: 50%;
+    overflow: hidden; }
+  .container-after .to, .container-after .from {
+    width: 100px;
+    height: 45px;
+    border-radius: 7px;
+    -webkit-filter: drop-shadow(0 0 38px rgba(40, 39, 40, 0.15));
+            filter: drop-shadow(0 0 38px rgba(40, 39, 40, 0.15));
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .container-after .from {
+    position: absolute;
+    right: 40px;
+    top: 40px; }
+  .container-after .to {
+    position: absolute;
+    left: 40px;
+    top: 40px; }
+  .container-after .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.3);
+    outline: none;
+    margin: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .container-after .slider:hover {
+      background: rgba(242, 242, 242, 0.1); }
+    .container-after .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 6px;
+      height: 600px;
+      background: white;
+      cursor: pointer;
+      position: relative;
+      left: 5px; }
+    .container-after .slider::-moz-range-thumb {
+      width: 6px;
+      height: 600px;
+      background: white;
+      cursor: pointer; }
+  .container-after .slider-button {
+    pointer-events: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(163, 123, 81, 0.34);
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer; }
+    .container-after .slider-button i {
+      margin: 3px; }
+    .container-after .slider-button .ten, .container-after .slider-button .ten2 {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: #a37b51;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 50%; }
+    .container-after .slider-button .ten {
+      width: 60px;
+      height: 60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .container-after .slider-button .ten1 {
+      width: 40px;
+      height: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
@@ -1841,21 +1984,26 @@ header {
             -ms-flex-pack: center;
                 justify-content: center; } }
     .section-home-skills .wrapper .item {
-      width: 400px;
+      width: calc((100% / 4) - 20px);
       height: 332px;
-      margin-right: 15px;
-      margin-top: 15px;
+      margin: 15px 10px 0;
       border-radius: 25px;
-      background-position: center center;
+      background-position: 100% 10%;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       padding: 50px; }
+      @media (max-width: 1440px) {
+        .section-home-skills .wrapper .item {
+          width: calc((100% / 3) - 20px); } }
+      @media (max-width: 1300px) {
+        .section-home-skills .wrapper .item {
+          width: calc((100% / 2) - 20px); } }
       @media (max-width: 768px) {
         .section-home-skills .wrapper .item {
+          width: calc((100% / 1) - 20px);
           margin-right: 0; } }
       @media (max-width: 576px) {
         .section-home-skills .wrapper .item {
-          width: 320px;
           height: 270px; } }
 
 .partners-section {
@@ -2018,7 +2166,8 @@ header {
               transform: rotate(0deg); }
 
 .restoration-treatment-floors {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 50px; }
   .restoration-treatment-floors .restoration-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2050,24 +2199,30 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      width: 402px;
+      width: calc((100% / 4 ) - 20px);
       height: 751px;
       border-radius: 25px;
       background-color: #f3f2f2;
-      margin-right: 20px;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       padding: 40px;
-      margin-top: 50px;
+      margin: 50px 10px 0;
       position: relative; }
       .restoration-treatment-floors .restoration-block .item .view-we-works {
         position: absolute;
         bottom: -30px;
         color: #a37b51; }
+      @media (max-width: 1440px) {
+        .restoration-treatment-floors .restoration-block .item {
+          width: calc((100% / 3 ) - 20px); } }
+      @media (max-width: 1100px) {
+        .restoration-treatment-floors .restoration-block .item {
+          width: calc((100% / 2 ) - 20px); } }
       @media (max-width: 768px) {
         .restoration-treatment-floors .restoration-block .item {
-          margin-top: 80px; }
+          margin-top: 80px;
+          width: calc((100% / 1 ) - 20px); }
           .restoration-treatment-floors .restoration-block .item:nth-of-type(3), .restoration-treatment-floors .restoration-block .item:nth-of-type(4) {
             display: none; } }
       @media (max-width: 576px) {
@@ -2093,3 +2248,62 @@ header {
 .price-btn {
   background: #fff;
   border-radius: 10px; }
+
+.installation-installation-floors {
+  width: 100%;
+  margin-top: 100px; }
+  .installation-installation-floors .installation-floors-body {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    @media (max-width: 1220px) {
+      .installation-installation-floors .installation-floors-body {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .installation-installation-floors .installation-floors-body .item {
+      width: calc((100% / 3) - 20px);
+      height: 350px;
+      border-radius: 25px;
+      background-color: #f3f2f2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding: 40px 30px;
+      margin: 30px 10px 0 10px; }
+      @media (max-width: 1200px) {
+        .installation-installation-floors .installation-floors-body .item {
+          width: calc((100% / 2) - 20px); } }
+      @media (max-width: 768px) {
+        .installation-installation-floors .installation-floors-body .item {
+          width: 100%;
+          margin: 30px 0 0 0; } }
+      .installation-installation-floors .installation-floors-body .item .title {
+        text-decoration: underline !important;
+        color: #282728;
+        font-weight: 600; }
+
+.after-before-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .after-before-item .container-after {
+    border-radius: 50px;
+    overflow: hidden; }

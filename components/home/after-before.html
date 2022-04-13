@@ -1,0 +1,65 @@
+<section class="after-before">
+  <div class="wrapper position-relative">
+    <h1 class="text-center c-black">
+      <b>Посмотрите,</b> как преобразился
+      пол у наших клиентов
+    </h1>
+    <div class="text-center c-black fs18 mt-4 ">
+      <img src="images/icons/move-icon.png" alt="Move Icon" class="me-2">
+      <b>Передвигайте указатель</b> на изображении влево/вправо для просмотр
+    </div>
+    <div class="after-before-mobile-title">
+      <div class="fs16">
+        После
+      </div>
+      <div class="fs16">
+        До
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <button class="header-slider-prev bgc-grey border-0" type="button"
+              data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <i class="fas fa-chevron-left c-while"></i>
+      </button>
+      <div class="after-before-item">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <for count="3" data-center="'',active,''">
+            <div class="carousel-item {{center}}">
+              <div class="container-after ">
+                <div class="img background-img" style="background-image: url(images/after-before/1.png)">
+                  <div class="from">
+                    После
+                  </div>
+                </div>
+                <div class="img foreground-img" style="background-image: url(images/after-before/2.png)">
+                  <div class="to">
+                    До
+                  </div>
+                </div>
+                <input type="range" min="1" max="100" value="50" class="slider">
+                <div class="slider-button">
+                  <div class="ten">
+                    <i class="far fa-chevron-left"></i>
+                    <i class="far fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </for>
+        </div>
+      </div>
+      <button class="header-slider-next bgc-grey border-0" type="button"
+              data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <i class="fas fa-chevron-right c-while"></i>
+      </button>
+    </div>
+  </div>
+</section>

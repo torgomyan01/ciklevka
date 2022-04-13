@@ -1,0 +1,62 @@
+<section class="our-works">
+  <div class="wrapper">
+    <h1 class="fs40 fs65-lg text-center">
+      Примеры <b>наших работ</b>
+    </h1>
+    <div class="categories-block">
+      <for count="7" data-name="Циклевка паркета,Реставрация,Тонировка паркета, Брошюровка паркета, Укладка массивной доски, Укладка инженерной доски, Укладка фанеры">
+        <div class="item ">
+          {{name}}
+        </div>
+      </for>
+    </div>
+    <div class="images-block">
+      <for count="9"
+           data-images="1,2,3,4,5,6,7,8,9"
+           data-name="
+             Приемная комната президента китайского банка,
+             Судно №1 «Россия»,
+             Бизнес центр «Фабрика Станиславского» Этап №2
+             Элитный апартамент Санкт-Петербург, Новая Скандинавия.,
+             Кабинет президента «Энергопром»,
+             Элитный Апартамент Москва Якиманка. Проект,
+             Приемная комната президента китайского банка,
+             Судно №1 «Россия»,
+             Бизнес центр «Фабрика Станиславского» Этап №2
+            "
+           data-subtitle="
+            (в здании Московской Областной Думы),
+            (Корабль Прези),
+             ,
+            (Старинный паркет элитного уровня),
+            ,
+            ,
+            (в здании Московской Областной Думы),
+            (Корабль Президента РФ),
+          "
+      >
+        <div class="work-block">
+          <div class="img-block" style="background-image: url(images/home/our-works/{{images}}.png)">
+            <div class="video-play">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="img-count">
+              +5 фото
+            </div>
+          </div>
+          <a href="#">
+            <h3 class="fs30 c-black">{{name}}</h3>
+          </a>
+          <h5 class="fs16 text-center c-black mt-3">{{subtitle}}</h5>
+        </div>
+      </for>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <a href="#">
+        <button class="btn-grey-large fs16">
+          Перейти в портфолио
+        </button>
+      </a>
+    </div>
+  </div>
+</section>

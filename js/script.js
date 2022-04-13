@@ -1,4 +1,16 @@
 
+const classes = {
+    center: 'center',
+    foregroundImg: '.foreground-img',
+    sliderButton: '.slider-button',
+    containerAfter: '.container-after',
+    slider: '.slider',
+    active: 'active'
+}
+
+
+
+//---------- HEADER SLIDER ---------------------
 $('#header-slider').slick({
     dots: true,
     prevArrow: `<button class="header-slider-prev"><i class="fas fa-chevron-left"></i></button>`,
@@ -10,7 +22,10 @@ $('#header-slider').slick({
     autoplaySpeed: 5000,
 });
 
+//---------- HEADER SLIDER ---------------------
 
+
+//---------- PARTNER SLIDER ---------------------
 $('.partners-body').slick({
     dots: true,
     prevArrow: `<button class="slider-prev"><i class="far fa-arrow-left"></i></button>`,
@@ -37,7 +52,10 @@ $('.partners-body').slick({
         },
     ]
 });
+//---------- PARTNER SLIDER ---------------------
 
+
+//---------- MOBILE MENU ---------------------
 const mobileMenu = $('.mobile-menu');
 const mobileMenuItem = $('.mobile-menu .menu-item a');
 const mobileSubMenu = $('.mobile-menu .mobile-sub-menu');
@@ -77,7 +95,7 @@ $('#menu-go-prev').on('click', function (){
     $('#sub-modal-block').html('');
 });
 
-
+//---------- MOBILE MENU ---------------------
 
 
 
@@ -86,7 +104,6 @@ $('#menu-go-prev').on('click', function (){
 // --------- OUR SERVICES ------------------
 const btnOpenCloseText = $('.our-services .open-close-text');
 const textBlock = $('.our-services .text-block');
-
 const tenBlock = $('.our-services .text-block .ten');
 
 btnOpenCloseText.on('click', function (){
@@ -101,12 +118,63 @@ btnOpenCloseText.on('click', function (){
     }
 })
 
+// --------- OUR SERVICES ------------------
+
+
 
 // ------------- AFTER BEFORE SECTION -----------
-$("#slider").on("input change", (e)=>{
+
+$(classes.slider).on("input change", function (e) {
     const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.foreground-img').css('width', `${sliderPos}%`)
-    // Update the position of the slider button
-    $('.slider-button').css('left', `${sliderPos}%`)
+    const thisParent = $(this).parent(classes.containerAfter);
+    thisParent.children(classes.foregroundImg).css('width', `${sliderPos}%`);
+    thisParent.children(classes.sliderButton).css('left', `${sliderPos}%`);
 });
+
+// ------------- AFTER BEFORE SECTION -----------
+
+
+//---------- OUR WORKS CATEGORIES ---------------------
+
+$('.categories-block').slick({
+    dots: false,
+    prevArrow: `<button class="slider-prev"><i class="far fa-chevron-left"></i></button>`,
+    nextArrow: `<button class="slider-next"><i class="far fa-chevron-right"></i></button>`,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 1500,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
+});
+
+
+
+
+const catItem = $('.our-works .categories-block .item');
+
+catItem.on('click', function (){
+    catItem.removeClass(classes.active);
+    $(this).addClass(classes.active)
+})
+
+//---------- OUR WORKS CATEGORIES  ---------------------

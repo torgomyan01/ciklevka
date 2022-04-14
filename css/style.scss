@@ -11,7 +11,7 @@ html {
   html { font-size: 14px; }
 }
 @media (max-width: 768px){
-  html { font-size: 11.8px; }
+  html { font-size: 12px; }
 }
 
 *{
@@ -1283,6 +1283,53 @@ header{
 }
 
 
+@mixin sliderButtonGray($top){
+  .header-slider-prev, .header-slider-next{
+    border: 1px solid #8f6e476b;
+    top: $top;
+    i{
+      color: #8f6e476b;
+    }
+    &:hover{
+      background: $c-grey;
+      i{
+        color: white;
+      }
+    }
+  }
+  .header-slider-prev{
+    left: -3.8125rem;
+    @media (max-width: $xl){
+      left: 0;
+    }
+    @media (max-width: $sm){
+      left: 0.9375rem;
+    }
+  }
+}
+
+@mixin sliderGreyDots($bottom){
+  .slick-dots{
+    position: absolute;
+    left: 0;
+    bottom: $bottom;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    li{
+      &.slick-active{
+        background: rgba(163, 123, 81, 0.30);
+        button{
+          background: $c-grey;
+        }
+      }
+      button{
+        background: rgba(163, 123, 81, 0.68);
+      }
+    }
+  }
+}
+
 .reviews-section{
   margin-top: 18.75rem;
   @media (max-width: $md) {
@@ -1325,6 +1372,7 @@ header{
     .effect{
       position: relative;
       top: -1.375rem;
+      margin-left: -45px;
     }
   }
   .reviews{
@@ -1351,46 +1399,8 @@ header{
         background: linear-gradient(270deg, white, transparent);
       }
     }
-    .slick-dots{
-      position: absolute;
-      left: 0;
-      bottom: -3.75rem;
-      right: 0;
-      margin: 0 auto;
-      li{
-        &.slick-active{
-          background: rgba(163, 123, 81, 0.30);
-          button{
-            background: $c-grey;
-          }
-        }
-        button{
-          background: rgba(163, 123, 81, 0.68);
-        }
-      }
-    }
-    .header-slider-prev, .header-slider-next{
-      border: 1px solid $c-grey;
-      top: 30%;
-      i{
-        color: $c-grey;
-      }
-      &:hover{
-        background: $c-grey;
-        i{
-          color: white;
-        }
-      }
-    }
-    .header-slider-prev{
-      left: -3.8125rem;
-      @media (max-width: $xl){
-        left: 0;
-      }
-      @media (max-width: $sm){
-        left: 0.9375rem;
-      }
-    }
+    @include sliderGreyDots(-3.75rem);
+    @include sliderButtonGray(30%);
     .header-slider-next{
       right: -1.875rem;
     }
@@ -1469,5 +1479,109 @@ header{
         }
       }
     }
+  }
+}
+
+
+
+.discounts-promotions{
+  margin-top: 6.25rem;
+  .wrapper{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+  }
+  .left-block{
+    @include col(5.5);
+    margin-right: 2.875rem;
+    @media (max-width: $lg) {
+      @include col(12);
+    }
+    .item{
+      width: 100%;
+      height: auto;
+      border-radius: 2.8125rem;
+      background: #bd8d59 url(../images/home/discounts-promotions/bg.png) no-repeat center center;
+      background-size: cover;
+      overflow: hidden;
+      .this-body{
+        width: 100%;
+        height: 100%;
+        background: url(../images/home/discounts-promotions/о.png) no-repeat center center;
+        background-size: contain;
+        padding: 1.5625rem 1.5625rem 4rem;
+        .round{
+          width: 12.5rem;
+          height: 12.5rem;
+          border-radius: 50%;
+          background-color: #cfad88;
+          @include flex('c', 'c');
+          flex-direction: column;
+          position: relative;
+          margin: 0.625rem 0.625rem 0;
+          img{
+            @media (max-width: $lg) {
+              width: 9rem;
+            }
+          }
+          h4{
+            color: #fff;
+            font-size: 0.875rem;
+            letter-spacing: 0;
+            font-weight: 500;
+            position: absolute;
+            top: 8.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .right-block{
+    @include col(5);
+    padding-left: 6.25rem;
+    @media (max-width: $lg) {
+      @include col(12);
+      margin-top: 30px;
+    }
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+    .right-block-body{
+      .item{
+        width: calc(100% - 50px);
+        height: 29.6875rem;
+        border-radius: 45px;
+        background: #f3f2f2 url(../images/home/discounts-promotions/percent-mg.png) no-repeat center center;
+        background-size: cover;
+        padding: 3.125rem
+      }
+    }
+  }
+  @include sliderButtonGray(50%);
+
+  @media (max-width: $md) {
+    @include sliderButtonGray(94%);
+  }
+  .header-slider-next{
+    right: -9rem;
+    @media (max-width: $lg) {
+      right: 0;
+    }
+  }
+  .header-slider-prev{
+    @media (max-width: $lg) {
+      left: 4rem;
+    }
+    @media (max-width: $md) {
+      left: 3rem;
+    }
+  }
+  @include sliderGreyDots(2.175rem);
+  @media (max-width: $md) {
+    @include sliderGreyDots(1.25rem);
   }
 }

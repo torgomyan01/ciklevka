@@ -216,3 +216,21 @@ $('.reviews-section .reviews').slick({
 });
 
 //---------- reviews-section ---------------------
+
+
+
+
+//---------- discounts-promotions  ---------------------
+
+$('.discounts-promotions .right-block .right-block-body').slick({
+    dots: true,
+    prevArrow: `<button class="header-slider-prev"><i class="fas fa-chevron-left"></i></button>`,
+    nextArrow: `<button class="header-slider-next"><i class="fas fa-chevron-right"></i></button>`,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000
+});
+
+//---------- discounts-promotions  ---------------------

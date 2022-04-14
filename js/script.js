@@ -178,3 +178,41 @@ catItem.on('click', function (){
 })
 
 //---------- OUR WORKS CATEGORIES  ---------------------
+
+
+//---------- reviews-section ---------------------
+
+$('.reviews-section .reviews').slick({
+    dots: true,
+    prevArrow: `<button class="header-slider-prev "><i class="fas fa-chevron-left"></i></button>`,
+    nextArrow: `<button class="header-slider-next"><i class="fas fa-chevron-right"></i></button>`,
+    speed: 500,
+    centerPadding: '60px',
+    centerMode: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+        {
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
+});
+
+//---------- reviews-section ---------------------

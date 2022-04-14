@@ -645,6 +645,10 @@ header{
   border-bottom: 1px dashed $c-grey;
 }
 
+.border-bottom-dashed-while {
+  border-bottom: 1px dashed $c-while;
+}
+
 .border-grey {
   border: 1px solid $c-grey;
 }
@@ -1583,5 +1587,46 @@ header{
   @include sliderGreyDots(2.175rem);
   @media (max-width: $md) {
     @include sliderGreyDots(1.25rem);
+  }
+}
+
+
+.trust-section{
+  width: 100%;
+  height: auto;
+  margin-top: 6.25rem;
+  .trust-section-body{
+    margin-top: 50px;
+    @include flex('sb', 'c');
+    flex-wrap: wrap;
+    @media (max-width: $md){
+      justify-content: center;
+    }
+    .item{
+      @include col(3.80);
+      height: 23.4375rem;
+      margin: 15px 0;
+      padding: 3rem;
+      @include bg;
+      border-radius: 25px;
+      background-color: #f3f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      @media (max-width: $lg){
+        @include col(5.8);
+      }
+      @media (max-width: $md){
+        @include col(11.8);
+        height: auto;
+      }
+    }
+    .quotation{
+      margin-top: 20px;
+      img{
+        margin: -5px 0 0 -30px;
+      }
+    }
   }
 }

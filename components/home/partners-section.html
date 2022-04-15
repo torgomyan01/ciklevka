@@ -1,16 +1,19 @@
 <section class="partners-section">
   <div class="wrapper">
-    <h1 class="c-black fs30">
-      <b>Наши клиенты:</b>
-    </h1>
+    <div class="d-flex justify-content-between">
+      <h1 class="c-black fs30">
+        <b>{{title}}</b>
+      </h1>
+      {{subtitle}}
+    </div>
 
     <div class="partners-body mb-5">
 
 
-      <for count="5" data-imageurl="images/home/partners/1.png, images/home/partners/2.png, images/home/partners/3.png, images/home/partners/4.png, images/home/partners/5.png">
+      <for count="5" data-imageurl="1,2,3,4,5">
         <div class="item">
           <div class="img-block">
-            <img src="{{imageurl}}" alt="Ритц-карлтон (Сеть отелей)">
+            <img src="images/home/partners/{{imageurl}}.png" alt="Ритц-карлтон (Сеть отелей)">
           </div>
           <p class="fs12">Ритц-карлтон (Сеть отелей) копия</p>
         </div>

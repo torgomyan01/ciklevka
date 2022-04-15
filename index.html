@@ -33,7 +33,13 @@
 
 <component src="components/home/section-home-skills.html"></component>
 
-<component src="components/home/partners-section.html"></component>
+<component
+    src="components/home/partners-section.html"
+    props='{
+           title: Наши клиенты;
+           subtitle: ;
+           }
+'></component>
 
 <component src="components/home/our-services.html"></component>
 
@@ -52,6 +58,15 @@
 <component src="components/home/discounts-promotions.html"></component>
 
 <component src="components/home/trust-section.html"></component>
+
+<component src="components/home/for-company.html"></component>
+
+<component src="components/home/partners-section.html"
+           props='{
+             title: Наши партнеры;
+             subtitle: <a href="#" class="c-grey border-bottom-dashed">Смотреть всех клиентов<i class="far fa-arrow-right ms-2"></i></a>;
+           }
+'></component>
 
 
 

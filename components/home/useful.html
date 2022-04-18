@@ -1,0 +1,38 @@
+<section class="useful">
+  <div class="wrapper">
+    <h1 class="text-center fs35 fs65-md mb-3 mb-md-5">
+      <b>Полезные статьи </b>
+      из нашего блога
+    </h1>
+
+    <div class="useful-body">
+
+
+      <for count="4"
+           data-images="1,2,3,4"
+           data-title="
+           Нужна тонировка паркета?,
+           Как выбрать паркет в магазине?,
+           Как выбрать цвет для тонировки паркета,
+           Паркет из экзотическихпород дерева
+        ">
+        <div class="item">
+          <div class="img-block" style="background-image: url(images/home/useful/{{images}}.png)"></div>
+          <h3 class="title">{{title}}</h3>
+          <div class="mt-2 text-center text-md-start">
+            <a href="#" class="c-grey border-bottom-dashed fs16 fs12-md fw-bold">
+              Читать подробнее
+              <i class="far fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </for>
+
+
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <button class="btn-grey-large">Смотреть еще</button>
+    </div>
+  </div>
+</section>

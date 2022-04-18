@@ -54,8 +54,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@mixin col($num) {
-  width: calc((100% / 12) * #{$num});
+@mixin col($colCount, $margin: 0rem) {
+  width: calc((100% / 12) * #{$colCount} - #{$margin});
 }
 
 @mixin flex($x, $y) {
@@ -2064,5 +2064,141 @@ header {
     width: 15.75rem;
     height: 3.0625rem;
     @include flex('c', 'c');
+  }
+}
+
+
+.useful{
+  margin-top: 5.625rem;
+  .useful-body {
+    @include flex('sb', 'c');
+    flex-wrap: wrap;
+    .item {
+      @include col(3, 1.25rem);
+      margin-right: 1.25rem;
+      @media (max-width: $xl){
+        @include col(6, 1.25rem);
+        margin-top: 1.875rem;
+      }
+      @media (max-width: $md){
+        @include col(12);
+        margin-top: 1.875rem;
+        margin-right: 0;
+
+      }
+      &:last-child{
+        @media (max-width: $xl){
+          margin-right: 1.25rem;
+        }
+        @media (max-width: $md){
+          margin-right: 0;
+        }
+      }
+      .img-block{
+        @include bg;
+        height: 18.75rem;
+        border-radius: 1.5625rem;
+        background-color: #f3f2f2;
+      }
+      .title{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.625rem;
+        color: #282728;
+        margin-top: 1.25rem;
+        font-weight: 700;
+        @media (max-width: $md){
+          text-align: center;
+        }
+      }
+
+    }
+  }
+}
+
+.save-me{
+  margin-top: 6.25rem;
+  background: url(../images/home/save-me/bg.png) no-repeat 50% 18rem;
+  background-size: cover;
+  margin-bottom: 50px;
+  .section-title{
+    font-size: 4.0625rem;
+    color: #282728;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 0 15%;
+    @media (max-width: $lg){
+      padding: 0 5%;
+    }
+    @media (max-width: $md){
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  }
+  .example{
+    @media (max-width: $md){
+      width: 23.5rem;
+    }
+    @media (max-width: $sm){
+      width: 18.5rem;
+    }
+    @media (max-width: 425px){
+      width: 13.5rem;
+      margin-left: -2.8rem;
+    }
+  }
+  .heard-block{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #282828;
+    font-weight: 400;
+    margin-top: 3.125rem;
+    @include flex('c', 'c');
+    @media (max-width: $md){
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .keyboard-step{
+    margin-top: 3.125rem;
+    @include flex('sb', 'c');
+    @media (max-width: $xl){
+      flex-direction: column;
+    }
+    .item{
+      @include col(6);
+      @include flex('sb', 'c');
+      @media (max-width: $xl){
+        @include col(12);
+      }
+      .name-step{
+        font-size: 1.1875rem;
+        color: #282728;
+        img{
+          transform: translate(4rem, 0.7rem);
+          @media (max-width: 425px){
+            width: 7.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.smile-btn{
+  height: 3.75rem;
+  border-radius: 1.875rem;
+  background-color: #cfad88;
+  padding: 0.625rem 1.25rem;
+  @include flex('c', 'c');
+  border: 0;
+  font-size: 1rem;
+  line-height: 3.4375rem;
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ad9170;
   }
 }

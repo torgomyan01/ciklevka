@@ -326,6 +326,16 @@ $c-grey-hover: #8f6e47;
   right: 0;
 }
 
+.rating-block {
+  @include flex('s', 'c');
+  @media (max-width: $xxl) {
+    margin-top: 10px;
+  }
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
 header {
   width: 100%;
   height: auto;
@@ -368,15 +378,6 @@ header {
       }
     }
 
-    .rating-block {
-      @include flex('s', 'c');
-      @media (max-width: $xxl) {
-        margin-top: 10px;
-      }
-      @media (max-width: $md) {
-        display: none;
-      }
-    }
 
     .calc-block {
       @include flex('s', 'c');
@@ -2200,5 +2201,126 @@ header {
   transition: 0.3s;
   &:hover {
     background-color: #ad9170;
+  }
+}
+
+
+footer{
+  background-color: #fff1d7;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  margin-top: 3.125rem;
+  .wrapper{
+    max-width: 1900px;
+    @include flex('s', 's');
+    flex-wrap: wrap;
+  }
+  .logo-block{
+    @include col(2);
+    padding-right: 20px;
+    @media (max-width: 1500px){
+      @include col(3);
+    }
+    @media (max-width: 1300px){
+      @include col(6);
+    }
+    @media (max-width: 576px){
+      @include col(12);
+      @include flex('c', 'c');
+      flex-direction: column;
+      padding: 0 2rem;
+      text-align: center;
+    }
+  }
+
+  .menu-block{
+    @include col(1);
+    @media (max-width: 1300px){
+      @include col(6);
+      margin-top: 20px;
+    }
+    @media (max-width: 576px){
+      @include col(12);
+      text-align: center;
+    }
+  }
+
+
+  .work-our-teams{
+    @include col(5);
+    padding-right: 20px;
+    @media (max-width: 1500px){
+      @include col(7);
+    }
+    @media (max-width: 1300px){
+      @include col(12);
+      margin-top: 1.25rem;
+    }
+    @media (max-width: 576px){
+      @include col(12);
+      margin-top: 1.25rem;
+      text-align: center;
+      .row {
+        .d-flex{
+          width: 100%;
+          justify-content: center !important;
+        }
+      }
+    }
+  }
+
+  .our-office-info{
+    @include col(2);
+    @media (max-width: 1300px){
+      @include col(6);
+      margin-top: 20px;
+    }
+    .address-item{
+      @include flex('s','c');
+      @media (max-width: 576px){
+        margin: 0 auto;
+        width: 250px;
+      }
+    }
+    @media (max-width: 576px){
+      @include col(12);
+      margin-top: 1.25rem;
+      h3{
+        text-align: center;
+      }
+    }
+  }
+
+  .contact-block{
+    @include col(2);
+    @media (max-width: 1300px){
+      @include col(6);
+      margin-top: 20px;
+    }
+    @media (max-width: 576px){
+      width: 250px;
+      margin: 1.25rem auto 0 auto;
+
+    }
+  }
+
+  .img-block{
+    width: 210px;
+    height: 122px;
+    border-radius: 15px;
+    background-color: #a37c52;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1.25rem;
+    @media (max-width: 576px){
+      margin: 1.25rem auto;
+      width: 250px;
+      height: 151px;
+    }
+    img{
+      position: absolute;
+      bottom: -10rem;
+      left: -6rem;
+    }
   }
 }

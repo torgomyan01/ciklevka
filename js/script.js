@@ -234,3 +234,17 @@ $('.discounts-promotions .right-block .right-block-body').slick({
 });
 
 //---------- discounts-promotions  ---------------------
+
+
+
+// ---------------------- TYOM ------------------------
+
+const paginationItem = $('.container-fluid .hov_main .numbr_main .bl1 .lin');
+
+paginationItem.on('click', function (e){
+    e.preventDefault();
+    paginationItem.removeClass('active');
+    $(this).addClass('active');
+})
+
+// ---------------------- TYOM ------------------------

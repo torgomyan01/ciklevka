@@ -2379,8 +2379,6 @@ $fontFamily: 'Inter', sans-serif;
 
 }
 
-
-
       .nav_ul3 {
         display: flex;
         width: 100%;
@@ -2688,19 +2686,12 @@ a:hover {
     }
   }
 
-  //#imgbg {
-  //  background-image: url("../img/img9.png");
-  //}
-
   #swedishid {
     width: 46%;
   }
 
 
   .hov_main {
-    //* {
-    //  border: 1px solid red;
-    //}
 
     display: flex;
     align-items: center;
@@ -2761,53 +2752,25 @@ a:hover {
       }
     }
   }
-
-
-  .privacy_policy_main {
-    width: 100%;
-    height: 74px;
-    background-color: #a87f54;
-    display: flex;
-    justify-content: space-around;
-
-    .privacy_policy_left {
-      display: flex;
-      align-items: center;
-
-      p {
-        @include font(12px, 21px, #ffffff, 400, $fontFamily);
-        margin-bottom: 0;
-        width: 68%;
-      }
-
-    }
-
-    .privacy_policy_center {
-      display: flex;
-      align-items: center;
-
-      p {
-        @include font(12px, 21px, #ffffff, 400, $fontFamily);
-        margin-bottom: 0;
-        width: 61%;
-        text-align: center;
-      }
-    }
-
-    .privacy_policy_right {
-      display: flex;
-      align-items: center;
-
-      p {
-        @include font(12px, 21px, #ffffff, 400, $fontFamily);
-        margin-bottom: 0;
-        width: 61%;
-        text-align: center;
-      }
-    }
-  }
 }
+.privacy_policy_main {
+  width: 100%;
+  height: 74px;
+  background-color: #a87f54;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
+  .privacy_policy_left {
+    p {
+      @include font(0.75rem, 1.3125rem, #ffffff, 400, $fontFamily);
+      margin-bottom: 0;
+      width: 68%;
+    }
+
+  }
+
+}
 
 
 

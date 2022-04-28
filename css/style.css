@@ -3911,88 +3911,6 @@ a:hover {
           align-items: center;
   width: 100%; }
 
-.wha {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.btn1 {
-  width: 215px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #1fcf51; }
-
-.btn2 {
-  width: 65px;
-  height: 18px;
-  border-radius: 9px;
-  -webkit-filter: drop-shadow(0 0 29.5px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0 0 29.5px rgba(0, 0, 0, 0.15));
-  background-color: #ffffff;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.text1 {
-  font-size: 12px;
-  letter-spacing: 0px;
-  line-height: 18px;
-  color: #282728;
-  font-weight: 400;
-  font-family: "Inter"; }
-
-.text2 {
-  font-size: 13px;
-  letter-spacing: 0px;
-  line-height: 12px;
-  color: #ffffff;
-  font-weight: 500;
-  font-family: "Inter"; }
-
-.text3 {
-  font-size: 14px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  color: #282728;
-  font-weight: 700;
-  font-family: "Inter"; }
-
-.text4 {
-  font-size: 23px;
-  letter-spacing: 0px;
-  line-height: 22px;
-  color: #282728;
-  font-weight: 300;
-  font-family: "Inter"; }
-
-.text5 {
-  font-size: 9px;
-  letter-spacing: 0px;
-  line-height: 22px;
-  color: #282728;
-  font-weight: 400;
-  font-family: "Inter"; }
-
-.text6 {
-  font-size: 12px;
-  letter-spacing: 1px;
-  line-height: 22px;
-  color: #a37b51;
-  font-weight: 500;
-  font-family: "Inter"; }
-
 .container-fluid .stock {
   width: 100%;
   display: -webkit-box;
@@ -4301,3 +4219,76 @@ a:hover {
     font-family: "Inter", sans-serif;
     margin-bottom: 0;
     width: 68%; }
+
+.container-fluid .supraflex_fon {
+  background-image: url("../img/img19.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
+  .container-fluid .supraflex_fon .supraflex_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid red; }
+    .container-fluid .supraflex_fon .supraflex_main .supraflex {
+      border: 1px solid red; }
+      .container-fluid .supraflex_fon .supraflex_main .supraflex h1 {
+        width: 84%; }
+  .container-fluid .supraflex_fon .cashless_payments_general {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1.25rem 0; }
+    .container-fluid .supraflex_fon .cashless_payments_general .cashless_payments_main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 33%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .container-fluid .supraflex_fon .cashless_payments_general .cashless_payments_main .cashless_payments_right p {
+        margin-left: 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #282728;
+        font-weight: 400;
+        font-family: "Inter", sans-serif; }
+  .container-fluid .supraflex_fon .pledge_general {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 55%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .container-fluid .supraflex_fon .pledge_general .pledge_main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .container-fluid .supraflex_fon .pledge_general .pledge_main p {
+        font-size: 1.875rem;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        color: #282728;
+        font-weight: 400;
+        font-family: "Inter", sans-serif; }
+      .container-fluid .supraflex_fon .pledge_general .pledge_main span {
+        margin-left: 1rem;
+        font-size: 1.875rem;
+        line-height: 1.125rem;
+        color: #a67d52;
+        font-weight: 700;
+        font-family: "Inter", sans-serif; }

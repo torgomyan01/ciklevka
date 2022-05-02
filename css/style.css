@@ -3866,6 +3866,12 @@ button:focus {
   outline: 0px dotted;
   outline: 0px auto -webkit-focus-ring-color; }
 
+.mt_top {
+  margin-top: 6.25rem; }
+
+.mb_bot {
+  margin-bottom: 6.25rem; }
+
 .nav_ul3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4234,61 +4240,107 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border: 1px solid red; }
-    .container-fluid .supraflex_fon .supraflex_main .supraflex {
-      border: 1px solid red; }
-      .container-fluid .supraflex_fon .supraflex_main .supraflex h1 {
-        width: 84%; }
-  .container-fluid .supraflex_fon .cashless_payments_general {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 1.25rem 0; }
-    .container-fluid .supraflex_fon .cashless_payments_general .cashless_payments_main {
+    height: 32rem; }
+    .container-fluid .supraflex_fon .supraflex_main .supraflex h1 {
+      width: 74%; }
+    .container-fluid .supraflex_fon .supraflex_main .cashless_payments_general {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 33%;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .container-fluid .supraflex_fon .cashless_payments_general .cashless_payments_main .cashless_payments_right p {
-        margin-left: 1rem;
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        color: #282728;
-        font-weight: 400;
-        font-family: "Inter", sans-serif; }
-  .container-fluid .supraflex_fon .pledge_general {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 55%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .container-fluid .supraflex_fon .pledge_general .pledge_main {
+      width: 100%;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 1.25rem 0; }
+      .container-fluid .supraflex_fon .supraflex_main .cashless_payments_general .cashless_payments_main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 29%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .container-fluid .supraflex_fon .supraflex_main .cashless_payments_general .cashless_payments_main .cashless_payments_right p {
+          margin-left: 1rem;
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+          color: #282728;
+          font-weight: 400;
+          font-family: "Inter", sans-serif; }
+    .container-fluid .supraflex_fon .supraflex_main .pledge_general {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-      .container-fluid .supraflex_fon .pledge_general .pledge_main p {
-        font-size: 1.875rem;
-        font-size: 1rem;
-        line-height: 1.125rem;
-        color: #282728;
-        font-weight: 400;
-        font-family: "Inter", sans-serif; }
-      .container-fluid .supraflex_fon .pledge_general .pledge_main span {
-        margin-left: 1rem;
-        font-size: 1.875rem;
-        line-height: 1.125rem;
-        color: #a67d52;
+      display: flex;
+      width: 58%;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .container-fluid .supraflex_fon .supraflex_main .pledge_general .pledge_main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .container-fluid .supraflex_fon .supraflex_main .pledge_general .pledge_main p {
+          font-size: 1.875rem;
+          font-size: 1rem;
+          line-height: 1.125rem;
+          color: #282728;
+          font-weight: 400;
+          font-family: "Inter", sans-serif; }
+        .container-fluid .supraflex_fon .supraflex_main .pledge_general .pledge_main span {
+          margin-left: 1rem;
+          font-size: 1.875rem;
+          line-height: 1.125rem;
+          color: #a67d52;
+          font-weight: 700;
+          font-family: "Inter", sans-serif; }
+    .container-fluid .supraflex_fon .supraflex_main .to_catalog_main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 73%; }
+      .container-fluid .supraflex_fon .supraflex_main .to_catalog_main a button {
+        width: 18.6875rem;
+        height: 6.25rem;
+        border-radius: 50px;
+        background-color: #a37b51;
+        padding: 0 3.75rem;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
         font-weight: 700;
         font-family: "Inter", sans-serif; }
+      .container-fluid .supraflex_fon .supraflex_main .to_catalog_main .tel-block .tel_top span {
+        font-size: 24px;
+        line-height: 44px;
+        color: #282728;
+        font-weight: 700;
+        font-family: "Inter", sans-serif; }
+      .container-fluid .supraflex_fon .supraflex_main .to_catalog_main .tel-block .number-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+  .container-fluid .supraflex_fon .supraflex_img {
+    width: 100%;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .container-fluid .supraflex_fon .supraflex_img img {
+      width: 80%;
+      height: 31.625rem; }
+    .container-fluid .supraflex_fon .supraflex_img #img22 {
+      width: 39.125rem;
+      height: 55.0625rem;
+      border-radius: 35px; }
+  .container-fluid .supraflex_fon .angle_grinder p {
+    font-size: 36px;
+    line-height: 16px;
+    color: #282728;
+    font-weight: 600;
+    font-family: "Inter", sans-serif; }

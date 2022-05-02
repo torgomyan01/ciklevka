@@ -2378,6 +2378,13 @@ $color: red;
 $fontWeight: 800;
 $fontFamily: 'Inter', sans-serif;
 
+.mt_top {
+  margin-top: 6.25rem;
+}
+
+.mb_bot {
+  margin-bottom: 6.25rem;
+}
 
 @mixin font( $fontSize, $lineHeight, $color, $fontWeight, $fontFamily) {
   font-size: $fontSize;
@@ -2725,58 +2732,119 @@ a:hover {
     background-size: cover;
     width: 100%;
     height: auto;
-
     .supraflex_main {
       display: flex;
       flex-direction: column;
-      border: 1px solid red;
+      height: 32rem;
 
       .supraflex {
         h1 {
-          width: 84%;
+          width: 74%;
+        }
+      }
+
+      .cashless_payments_general {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 1.25rem 0;
+
+        .cashless_payments_main {
+          display: flex;
+          align-items: center;
+          width: 29%;
+          justify-content: center;
+
+          .cashless_payments_right {
+            p {
+
+              margin-left: 1rem;
+              @include font(1.25rem, 1.5rem, #282728, 400, $fontFamily);
+              //width: 70%;
+            }
+          }
+        }
+      }
+
+      .pledge_general {
+        display: flex;
+        width: 58%;
+        justify-content: space-between;
+
+        .pledge_main {
+          display: flex;
+
+          p {
+            font-size: 1.875rem;
+            @include font(1rem, 1.125rem, #282728, 400, $fontFamily);
+          }
+
+          span {
+            margin-left: 1rem;
+            @include font(1.875rem, 1.125rem, #a67d52, 700, $fontFamily);
+          }
+        }
+      }
+
+      .to_catalog_main {
+        display: flex;
+        justify-content: space-between;
+        width: 73%;
+
+        a {
+          button {
+            width: 18.6875rem;
+            height: 6.25rem;
+            border-radius: 50px;
+            background-color: #a37b51;
+            padding: 0 3.75rem;
+            @include font(16px, 24px, #ffffff, 700, $fontFamily);
+
+          }
         }
 
-        border: 1px solid red;
-      }
-    }
+        .tel-block {
+          .tel_top {
+            span {
+              @include font(24px, 44px, #282728, 700, $fontFamily);
+            }
+          }
 
-    .cashless_payments_general {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      margin: 1.25rem 0;
-
-      .cashless_payments_main {
-        display: flex;
-        align-items: center;
-        width: 33%;
-        justify-content: center;
-
-        .cashless_payments_right {
-          p {
-
-            margin-left: 1rem;
-            @include font(1.25rem, 1.5rem, #282728, 400, $fontFamily);
-            //width: 70%;
+          .number-block {
+            display: flex;
+            //margin-top: 10px;
           }
         }
       }
     }
 
-    .pledge_general {
-      display: flex;
-      width: 55%;
-      justify-content: space-between;
-      .pledge_main{
-        display: flex;
-        p{
-          font-size:1.875rem;
-          @include font(1rem,1.125rem, #282728, 400, $fontFamily);
-        }
-        span{
-          margin-left: 1rem;
-          @include font(1.875rem,1.125rem, #a67d52, 700, $fontFamily);
-        }
+    .supraflex_img {
+      width: 100%;
+      height: auto;
+      align-items: center;
+
+      img {
+        width: 80%;
+        height: 31.625rem;
+      }
+
+      #img22 {
+        width: 39.125rem;
+        height: 55.0625rem;
+        border-radius: 35px;
+      }
+    }
+
+    .angle_grinder {
+      p {
+        @include font(36px, 16px, #282728, 600, $fontFamily);
+      }
+    }
+
+    .lagler_main{
+
+      .lagler{
+
       }
     }
   }

@@ -99,8 +99,6 @@ $('#menu-go-prev').on('click', function (){
 
 
 
-
-
 // --------- OUR SERVICES ------------------
 const btnOpenCloseText = $('.our-services .open-close-text');
 const textBlock = $('.our-services .text-block');
@@ -234,6 +232,26 @@ $('.discounts-promotions .right-block .right-block-body').slick({
 });
 
 //---------- discounts-promotions  ---------------------
+
+
+
+
+$('.open-close-info-catalog-item').on('click', function (){
+    const nextBlock = $(this).prev('.text');
+    if(nextBlock.hasClass('active')){
+        $(this).removeClass('active');
+        nextBlock.removeClass('active');
+    } else {
+        $(this).addClass('active');
+        nextBlock.addClass('active');
+    }
+})
+
+
+
+
+
+
 
 
 

@@ -27,7 +27,10 @@
 <body>
 
 
-<component src="components/header.html"></component>
+<component src="components/header.html" props='
+  headerBody: <component src="components/headers/home-header.html"></component>;
+  backgroundUrl: images/header-bg.png;
+'></component>
 
 <component src="components/mobile-menu.html"></component>
 

@@ -1,4 +1,4 @@
-<header>
+<header style="background-image: url({{backgroundUrl}})">
   <div class="wrapper">
     <div class="navbar-info">
       <a href="/" class="logo me-2">
@@ -146,51 +146,5 @@
     </div>
   </div>
 
-  <div class="slider-block" id="header-slider">
-    <for count="5">
-      <div>
-        <div class="lock-block">
-          <button class="btn btn-while fs30 viewer">под ключ</button>
-        </div>
-        <h1 class="c-black fs65">
-          <b>Паркетные работы</b> <span class="border-bottom-dashed">любой сложности</span>
-          <br>
-          и объемов в Москве и области
-        </h1>
-        <p class="d-flex align-items-center justify-content-center fs30 mt-4 c-black status">
-          <span class="min-rounded border-grey opacity-50"></span>
-          <span class="min-rounded border-grey opacity-75"></span>
-          <span class="min-rounded border-grey"></span>
-          Работаем по Немецкой и Шведской технологии
-          <span class="min-rounded border-grey ms-2"></span>
-          <span class="min-rounded border-grey opacity-75"></span>
-          <span class="min-rounded border-grey opacity-50"></span>
-        </p>
-        <div class="buttons-block">
-          <button class="btn-grey-large fw-bold">
-            Калькулятор стоимости
-          </button>
-          <button class="btn-while-large fw-bold">
-            Калькулятор стоимости
-          </button>
-        </div>
-      </div>
-    </for>
-  </div>
-
-  <div class="go-top-block">
-    <img src="images/icons/mouse-top.png" alt="Mouse Top Icon">
-  </div>
-
-  <div class="wrapper position-relative">
-    <div class="info-header-block">
-      <span class="info-icon">
-        <span>
-          <img src="images/icons/info.png" alt="Info Icon">
-        </span>
-      </span>
-      Работаем с юридическими и <br>
-      физическими лицами
-    </div>
-  </div>
+  {{headerBody}}
 </header>

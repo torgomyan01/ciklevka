@@ -4477,7 +4477,7 @@ header {
 footer {
   background-color: #fff1d7;
   padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-bottom: 8.125rem;
   margin-top: 3.125rem; }
   footer .wrapper {
     padding: 0 1.25rem;
@@ -5445,7 +5445,19 @@ a:hover {
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
+  @media (max-width: 768px) {
+    .privacy_policy_main {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .privacy_policy_main .footer-rat {
+    position: absolute;
+    top: calc(-100% + -7px);
+    left: 20%; }
   .privacy_policy_main .privacy_policy_left p {
     font-size: 0.75rem;
     line-height: 1.3125rem;
@@ -5454,6 +5466,9 @@ a:hover {
     font-family: "Inter", sans-serif;
     margin-bottom: 0;
     width: 68%; }
+    @media (max-width: 768px) {
+      .privacy_policy_main .privacy_policy_left p {
+        width: 100%; } }
 
 .container-fluid .supraflex_fon {
   background-image: url("../img/img19.png");

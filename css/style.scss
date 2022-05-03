@@ -2240,7 +2240,7 @@ header {
 footer {
   background-color: #fff1d7;
   padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+  padding-bottom: 8.125rem;
   margin-top: 3.125rem;
 
   .wrapper {
@@ -3170,12 +3170,25 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  @media (max-width: $md){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-rat{
+    position: absolute;
+    top: calc(-100% + -7px);
+    left: 20%;
+  }
 
   .privacy_policy_left {
     p {
       @include font(0.75rem, 1.3125rem, #ffffff, 400, $fontFamily);
       margin-bottom: 0;
       width: 68%;
+      @media (max-width: $md){
+        width: 100%;
+      }
     }
 
   }
@@ -3295,13 +3308,6 @@ a:hover {
     .angle_grinder {
       p {
         @include font(36px, 16px, #282728, 600, $fontFamily);
-      }
-    }
-
-    .lagler_main{
-
-      .lagler{
-
       }
     }
   }

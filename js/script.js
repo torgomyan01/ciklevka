@@ -168,7 +168,7 @@ $('.categories-block').slick({
 
 
 
-const catItem = $('.our-works .categories-block .item');
+const catItem = $('.categories-block .item');
 
 catItem.on('click', function (){
     catItem.removeClass(classes.active);
@@ -238,19 +238,29 @@ $('.discounts-promotions .right-block .right-block-body').slick({
 
 $('.open-close-info-catalog-item').on('click', function (){
     const nextBlock = $(this).prev('.text');
-    if(nextBlock.hasClass('active')){
-        $(this).removeClass('active');
-        nextBlock.removeClass('active');
+    if(nextBlock.hasClass(classes.active)){
+        $(this).removeClass(classes.active);
+        nextBlock.removeClass(classes.active);
     } else {
-        $(this).addClass('active');
-        nextBlock.addClass('active');
+        $(this).addClass(classes.active);
+        nextBlock.addClass(classes.active);
     }
 })
 
 
 
 
+const questionTitle = $('.question-page .question-body .question-excerpt .question-item .title');
 
+questionTitle.on('click', function (){
+    const parent = $(this).parent();
+    if(parent.hasClass(classes.active)){
+        parent.removeClass(classes.active);
+    } else {
+        questionTitle.parent().removeClass(classes.active);
+        parent.addClass(classes.active);
+    }
+})
 
 
 
@@ -261,8 +271,8 @@ const paginationItem = $('.container-fluid .hov_main .numbr_main .bl1 .lin');
 
 paginationItem.on('click', function (e){
     e.preventDefault();
-    paginationItem.removeClass('active');
-    $(this).addClass('active');
+    paginationItem.removeClass(classes.active);
+    $(this).addClass(classes.active);
 })
 
 // ---------------------- TYOM ------------------------

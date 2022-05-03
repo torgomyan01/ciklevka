@@ -2073,7 +2073,7 @@ a {
 
 ::-webkit-scrollbar {
   width: 5px;
-  height: 2px;
+  height: 5px;
   border-radius: 5px; }
 
 /* Track */
@@ -2082,11 +2082,12 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #a37b51; }
+  background: #c3c3c3;
+  border-radius: 10px; }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #8f6e47; }
+  background: #abaaaa; }
 
 .wrapper {
   width: 100%;
@@ -4952,6 +4953,143 @@ footer {
         .question-page .question-body .question-excerpt .question-item.active .title i {
           -webkit-transform: rotate(-180deg);
                   transform: rotate(-180deg); }
+
+.shipping-page {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  overflow: hidden;
+  position: relative; }
+  .shipping-page .titles {
+    width: 100%;
+    height: 9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: auto;
+    position: relative; }
+    .shipping-page .titles .item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 7.875rem;
+      min-width: 19.75rem;
+      margin-right: 1.4375rem;
+      border-radius: 20px;
+      background-color: #f3f2f2;
+      font-size: 1.4375rem;
+      color: #282728;
+      font-weight: 500;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      padding: 0 3.125rem;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 1; }
+      @media (max-width: 768px) {
+        .shipping-page .titles .item {
+          font-size: 14px;
+          height: 70px;
+          border-radius: 50px; } }
+      .shipping-page .titles .item:hover {
+        background-color: #cccccc; }
+      .shipping-page .titles .item.active {
+        background-color: #a37b51;
+        color: #fefefe; }
+  .shipping-page .shipping-body {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    margin-top: 5rem;
+    position: relative; }
+    @media (max-width: 768px) {
+      .shipping-page .shipping-body {
+        margin-top: 0; } }
+    .shipping-page .shipping-body p {
+      position: relative;
+      z-index: 1; }
+      @media (max-width: 768px) {
+        .shipping-page .shipping-body p {
+          text-align: center; } }
+    @media (max-width: 768px) {
+      .shipping-page .shipping-body h1, .shipping-page .shipping-body h3 {
+        text-align: center; } }
+  .shipping-page .shipping-bg {
+    position: absolute;
+    right: -20rem;
+    top: -8rem;
+    width: 90rem; }
+    @media (max-width: 1400px) {
+      .shipping-page .shipping-bg {
+        right: -18rem;
+        top: 9rem;
+        width: 77rem; } }
+    @media (max-width: 1200px) {
+      .shipping-page .shipping-bg {
+        right: -14rem;
+        top: 3rem;
+        width: 57rem; } }
+    @media (max-width: 992px) {
+      .shipping-page .shipping-bg {
+        right: -14rem;
+        top: 3rem;
+        width: 57rem; } }
+    @media (max-width: 768px) {
+      .shipping-page .shipping-bg {
+        display: none; } }
+
+.information-page {
+  margin-top: 5rem; }
+
+.info-body {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (max-width: 768px) {
+    .info-body {
+      margin-top: 2px; } }
+  .info-body .item {
+    width: calc((100% / 12) * 4 - 1.75rem);
+    height: 23.4375rem;
+    border-radius: 1.5625rem;
+    padding: 3.125rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 1.5625rem;
+    text-decoration: underline;
+    font-weight: 700;
+    margin-top: 1.75rem; }
+    @media (max-width: 1200px) {
+      .info-body .item {
+        width: calc((100% / 12) * 6 - 1.75rem); } }
+    @media (max-width: 768px) {
+      .info-body .item {
+        width: calc((100% / 12) * 12 - 0rem); } }
 
 button:focus {
   outline: 0px dotted;

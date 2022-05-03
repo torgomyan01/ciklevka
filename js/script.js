@@ -175,6 +175,17 @@ catItem.on('click', function (){
     $(this).addClass(classes.active)
 })
 
+
+
+const shippingPaymentTitleItems = $('.shipping-page .titles .item')
+
+shippingPaymentTitleItems.on('click', function (){
+    shippingPaymentTitleItems.removeClass(classes.active);
+    $(this).addClass(classes.active);
+})
+
+
+
 //---------- OUR WORKS CATEGORIES  ---------------------
 
 

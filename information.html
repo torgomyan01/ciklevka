@@ -22,24 +22,48 @@
   <script type="text/javascript" src="js/slick.min.js"></script>
 
   <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
-  <title>Rent</title>
+  <title>Часто-задаваемые вопросы</title>
 </head>
 <body>
 
 
-<component src="components/header.html" props='
-  headerBody: <component src="components/headers/header-reet.html"></component>;
-  backgroundUrl: images/rent/header.png;
-'></component>
+<component src="components/header2.html" props='{
+    link1: Информация;
+    link2: ;
+}'></component>
 <component src="components/mobile-menu.html"></component>
 
-<component src="components/rent/catalog-rent.html" ></component>
 
-<component src="components/home/our-services.html"></component>
+<section class="information-page">
 
-<component src="components/home/form-for-call.html"></component>
+  <div class="wrapper">
+    <h1 class="text-center fs30 fs65-lg">
+      <b>
+        Информация
+      </b>
+    </h1>
+    <div class="info-body" >
 
+      <for count="5"
+           data-images="1,2,3,4,5"
+           data-text="
+             Доставка <br> и оплата,
+             Акции <br> и скидки,
+             Статьи <br> и новости <br> Вопрос - ответ,
+             Оборудование
+          "
+      >
+        <div class="item" style="background-image: url(images/information/{{images}}.png)">
+          <a href="#" class="c-black">
+            Доставка <br>
+            и оплата
+          </a>
+        </div>
+      </for>
+    </div>
+  </div>
 
+</section>
 
 
 
@@ -51,6 +75,7 @@
 <script src="js/com.js"></script>
 
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
 <!--for my custom script -->
 <script src="js/script.js"></script>
 </body>

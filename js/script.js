@@ -10,6 +10,61 @@ const classes = {
 
 
 
+
+class StepsEvent {
+    constructor(stepAddress, activeStep) {
+        this.stepStart = activeStep;
+        this.stepEnd = stepAddress.length;
+        this.stepAddress = stepAddress;
+
+        // CLOSE ALL STEPS BLOCKS
+        this._closeAllStep();
+        this._openActiveSte();
+    }
+    _openActiveSte(){
+        document.querySelectorAll(this.stepAddress[this.stepStart]).forEach((item) => {
+            item.classList.remove('d-none');
+        })
+    }
+
+    _closeAllStep(){
+        this.stepAddress.forEach((address) => {
+            document.querySelectorAll(address).forEach((item) => {
+                item.classList.add('d-none');
+            })
+        });
+    }
+
+    nextStep(calBack = null){
+        if(this.stepStart < this.stepAddress.length){
+            this._closeAllStep();
+            this.stepStart = this.stepStart + 1;
+            const nextStepBlock = document.querySelectorAll(this.stepAddress[this.stepStart]);
+            nextStepBlock.forEach((item) => {
+                item.classList.remove('d-none');
+            });
+            calBack && calBack(this.stepStart);
+        } else {
+            console.log('End Step Length');
+        }
+    }
+
+    prevStep(calBack = null){
+        if(this.stepStart > 0){
+            this.stepStart = this.stepStart - 1;
+            this._closeAllStep();
+            const nextStepBlock = document.querySelectorAll(this.stepAddress[this.stepStart]);
+            nextStepBlock.forEach((item) => {
+                item.classList.remove('d-none');
+            })
+            calBack && calBack(this.stepStart);
+        } else {
+            console.log('This step 0');
+        }
+    }
+}
+
+
 //---------- HEADER SLIDER ---------------------
 $('#header-slider').slick({
     dots: true,
@@ -281,8 +336,73 @@ $('.contact-page .wrapper .slider-works').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 5000
 });
+
+
+
+
+const cardProductPlus = $('.card-page .counts-product .counts-product-body .fa-plus');
+const cardProductMinus = $('.card-page .counts-product .counts-product-body .fa-minus');
+
+cardProductPlus.on('click', function (){
+    const numberBlock = $(this).prev('span');
+    const number = +numberBlock.text();
+    numberBlock.html(number + 1);
+})
+
+cardProductMinus.on('click', function (){
+    const numberBlock = $(this).next('span');
+    const number = +numberBlock.text();
+    if(number > 1){
+        numberBlock.html(number - 1);
+    }
+})
+
+
+
+
+
+
+
+
+const cardSteps = ['#step1', '#step2'];
+const cardsPageSteps = new StepsEvent(cardSteps, 0);
+const next = $('#next-step');
+const prev = $('#prev-step')
+const loadingBlock = $('.step-loader .step-loader-body');
+
+next.on('click', function (){
+    cardsPageSteps.nextStep((count) => calcToSteps(count));
+})
+
+prev.on('click', function (){
+    cardsPageSteps.prevStep((count) => calcToSteps(count));
+})
+
+function calcToSteps(count){
+    if(count === 1){
+        prev.removeClass('d-none');
+        next.addClass('d-none');
+        loadingBlock.css('width', '100%');
+        loadingBlock.next('.step-count').text(`Шаг ${count + 1} из ${cardSteps.length}`);
+    } else {
+        next.removeClass('d-none');
+        prev.addClass('d-none');
+        loadingBlock.css('width', '50%');
+        loadingBlock.next('.step-count').text(`Шаг ${count + 1} из ${cardSteps.length}`);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,133 @@
+<section class="card-page">
+  <div class="wrapper">
+    <h1 class="fs30 fs65-md text-center mb-5"><b>Корзина</b></h1>
+    <div class="step-loader">
+      <div class="step-loader-body" style="width: 50%"></div>
+      <span class="step-count">Шаг 1 из 2</span>
+    </div>
+
+
+    <div class="card-page-body" id="step1">
+      <div class="title">
+        <span class="step-number">
+          01
+        </span>
+        Проверьте соств вашего заказа
+      </div>
+
+      <for count="8">
+        <component src="components/cards/product.html"></component>
+      </for>
+
+      <div class="mt-5 text-right">
+        <span class="fs30 fs48-md me-2">Итого: <b><span class="text-decoration-underline">34 275</span> руб</b></span>
+        (товаров: 4)
+      </div>
+
+    </div>
+    <div class="card-page-body" id="step2">
+      <div class="title">
+        <span class="step-number">
+          02
+        </span>
+        Оформление заказа
+      </div>
+
+      <div class="end-step-chek-variant">
+
+        <div class="item">
+          <p class="title-item">*Выберите способ доставки</p>
+          <div class="bdy">
+            <div>
+              <label class="def-radio">
+                <input type="radio" class="me-2" name="variant-shipping" checked>
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                Самовывоз
+              </label>
+              <label class="def-radio">
+                <input type="radio" class="me-2" name="variant-shipping">
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                Курьером
+              </label>
+              <div class="select-address">
+                Адрес доставки
+                <i class="far fa-map-marker-alt"></i>
+              </div>
+            </div>
+            <div>
+              <img src="images/cards/car.png" class="mt-2" alt="Img">
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <p class="title-item">*Выберите способ оплаты</p>
+          <div class="bdy">
+            <div>
+              <label class="def-radio">
+                <input type="radio" class="me-2" name="variant-order" checked>
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                При получении наличными
+              </label>
+              <label class="def-radio">
+                <input type="radio" class="me-2" name="variant-order">
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                При получении картой
+              </label>
+              <label class="def-radio">
+                <input type="radio" class="me-2" name="variant-order">
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                Оплатить онлайн
+              </label>
+            </div>
+            <img src="images/cards/pay.png" alt="Pay">
+          </div>
+        </div>
+
+      </div>
+
+      <form action="#" class="sent-cards">
+        <p class="text-center fs24">
+          <b>*Контактные данные</b> (укажите ваш адрес и мы отправим ближайшую точку самовывоза по <span class="c-green">WhatasApp</span>)
+        </p>
+        <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+          <input type="text" class="def-input me-3" placeholder="* Ваше Имя и Фамилия">
+          <input type="text" placeholder="+7 (___)___ - __ - __" data-mask="+7 (000)000 - 00 - 00" class="def-input me-3 tel-inp" autocomplete="off" maxlength="21">
+          <input type="text" class="def-input" placeholder="* Ваш E-mail">
+        </div>
+        <button class="w-100 btn-grey-large mt-4">Оформить заказ</button>
+        <div class="d-flex justify-content-center mt-3">
+          <label class="def-checkbox">
+            <input type="checkbox">
+            <span class="checking">
+              <i class="far fa-check"></i>
+            </span>
+            Согласие на обработку персональных данных
+          </label>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="d-flex justify-content-end align-items-center mt-5">
+      <button class="btn-grey-large me-2 d-none" id="prev-step">
+        <i class="far fa-angle-left"></i>
+        Предыдущий шаг
+      </button>
+      <button class="btn-grey-large" id="next-step">
+        Следующий шаг
+        <i class="far fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</section>

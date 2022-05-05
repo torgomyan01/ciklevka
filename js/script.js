@@ -397,6 +397,25 @@ function calcToSteps(count){
 
 
 
+// const defaultDropDown = $('.def-dropdown');
+//
+// defaultDropDown.on('click', function (){
+//     const thisElem = $(this);
+//     if(thisElem.hasClass(classes.active)){
+//         thisElem.removeClass(classes.active);
+//     } else {
+//         thisElem.addClass(classes.active);
+//     }
+// })
+
+
+// $(window).on('click', function (e){
+//     const thisClassName = e.target.className;
+//     console.log(thisClassName)
+//     if(thisClassName.includes(defaultDropDown.attr('class'))){
+//         defaultDropDown.removeClass(classes.active);
+//     }
+// })
 
 
 

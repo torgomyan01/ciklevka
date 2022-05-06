@@ -1,0 +1,98 @@
+$mobile: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$fontSizes: (6);
+$fontMedia: ("xxl": $xxl, "xl": $xl, "lg": $lg, "md": $md, "sm": $sm);
+$margins: ("m": "margin", "mt": "margin-top", "mr": "margin-right", "mb": "margin-bottom", "ml": "margin-left");
+$paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "padding-bottom", "pl": "padding-left");
+
+@for $i from 5 through 100 {
+  $fontSizes: append($fontSizes, $i);
+}
+
+@each $size in $fontSizes {
+  .fs#{$size} {
+    font-size: #{$size / 16}rem;
+  }
+}
+
+@each $sizeName, $size in $fontMedia {
+  @media (min-width: $md) {
+    @each $size in $fontSizes {
+      .fs#{$size}-#{$sizeName} {
+        font-size: #{$size / 16}rem;
+      }
+    }
+  }
+}
+
+@each $size in $fontSizes {
+  .border-radius-#{$size} {
+    border-radius: #{$size / 16}rem !important;
+  }
+}
+
+@each $size in $fontSizes {
+  .w-#{$size} {
+    width: #{$size / 16}rem;
+  }
+}
+
+@each $size in $fontSizes {
+  .h-#{$size} {
+    height: #{$size / 16}rem;
+  }
+}
+
+
+// ----------------- MARGINS AND PADDINGS --------------------
+@each $size in $fontSizes {
+  @each $media, $mediaSize in $fontMedia {
+    @media (max-width: $mediaSize){
+      @each $margin, $name in $margins {
+        .#{$margin}-#{$media}-#{$size}{
+          #{$name}: #{$size / 16}rem;
+        }
+      }
+    }
+  }
+  @each $media, $mediaSize in $fontMedia {
+    @media (max-width: $mediaSize){
+      @each $padding, $name in $paddings {
+        .#{$padding}-#{$media}-#{$size}{
+          #{$name}: #{$size / 16}rem;
+        }
+      }
+    }
+  }
+  @each $margin, $name in $margins {
+    .#{$margin}-#{$size}{
+      #{$name}: #{$size / 16}rem;
+    }
+  }
+  @each $padding, $name in $paddings {
+    .#{$padding}-#{$size}{
+      #{$name}: #{$size / 16}rem;
+    }
+  }
+}
+
+// ----------------- MARGINS AND PADDINGS --------------------
+
+
+.h-500{
+  height: 31.25rem;
+}
+.h-450{
+  height: 28.125rem;
+}
+.w-125{
+  width: 7.8125rem;
+}
+.h-125{
+  height: 7.8125rem;
+}

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Rent</title>
+</head>
+<body>
+
+
+<component src="components/header.html" props='
+  headerBody: <component src="components/shop/header-body.html"></component>;
+  backgroundUrl: images/shop/header-bg.png;
+'></component>
+<component src="components/mobile-menu.html"></component>
+
+
+<section class="shop-page">
+  <div class="wrapper max-wrapper">
+    <h1 class="fs36 c-black mb-4 text-center text-md-start">
+      <b>Категории</b>
+    </h1>
+
+    <div class="row">
+      <for count="3" data-images="1,2,3" data-name="Клей, Лак, Грунтовки">
+        <div class="col-12 col-md-4">
+          <div class="category-block mt-3 mt-md-0">
+            <p class="title">{{name}}</p>
+            <p class="sub-title">(190 товаров)</p>
+            <img src="images/shop/cat-{{images}}.png"  alt="cat1 ">
+          </div>
+        </div>
+      </for>
+    </div>
+
+    <div class="categories-block">
+      <for count="8" data-name="Bona, Loba, Osmo, Berger, Bona, Loba, Osmo, Berger">
+        <div class="item ">
+          {{name}}
+        </div>
+      </for>
+    </div>
+
+    <div class="filter-product">
+      <div class="filter-block">
+        <h4 class="title">
+          Воспользуйтесь фильтром:
+        </h4>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Бренд:</p>
+          <div class="cat-filter-item">
+            <for count="8" data-name="Bona AB, Loba,NPT, Lechner, Probond, Klingspor, Petri, Osmo">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Объем:</p>
+          <div class="cat-filter-item">
+            <for count="9" data-name="0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Объем, л:</p>
+
+          <div class="limit-block">
+            <input type="text" placeholder="от 1">
+            <input type="text" placeholder="до 15">
+          </div>
+        </div>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Назначение:</p>
+          <div class="cat-filter-item max-height-unset">
+            <for count="4" data-name="Для лаковых покрытий, Для плитки и ламината, Для удаления остатков клея, Для масляных покрытий, Универсальное">
+              <label class="def-checkbox w-100">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Фактура:</p>
+          <div class="cat-filter-item">
+            <for count="8" data-name="Bona AB, Loba,NPT, Lechner, Probond, Klingspor, Petri, Osmo">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Фактура:</p>
+          <div class="cat-filter-item">
+            <for count="8" data-name="Bona AB, Loba,NPT, Lechner, Probond, Klingspor, Petri, Osmo">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+        <div class="cat-filter">
+          <p class="cat-filter-title">Название пункта:</p>
+          <div class="cat-filter-item max-height-unset">
+            <for count="4" data-name="Bona AB, NPT, Probond, Petri">
+              <label class="def-checkbox w-100">
+                <input type="checkbox">
+                <span class="checking">
+                <i class="far fa-check"></i>
+              </span>
+                {{name}}
+              </label>
+            </for>
+          </div>
+        </div>
+
+        <div class="search-block">
+          <div class="view-count">
+            Найдено 145 товаров
+          </div>
+          <button class="btn-grey-large min">Показать все</button>
+        </div>
+
+      </div>
+      <div class="filter-products">
+        <div class="sort-block">
+          <div class="d-none d-md-flex justify-content-start flex-wrap">
+            <span class="c-black mr-8">Сортировать по:</span>
+            <span class="fs18 border-bottom-dashed c-grey cursor-pointer mr-46">Цене</span>
+            <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46">Обновлению</span>
+            <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46">Популярности</span>
+            <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46">На акции</span>
+          </div>
+          <div class="def-dropdown transparent d-inline-block d-md-none">
+            <button class="title-def-dropdown">
+              <span class="fa-regular fa-bars-filter me-2 c-grey"></span>
+              Сортировать по:
+              <i class="fa-solid fa-angle-down ms-3"></i>
+            </button>
+            <div class="def-dropdown-body pt-3">
+              <span class="fs18 border-bottom-dashed c-grey cursor-pointer mr-46 mt-3">Цене</span>
+              <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46 mt-2">Обновлению</span>
+              <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46 mt-2">Популярности</span>
+              <span class="fs18 c-black-grey cursor-pointer cursor-pointer mr-46 mt-2">На акции</span>
+            </div>
+          </div>
+          <div class="def-dropdown grey mt-3 mt-xxl-0">
+            <button class="title-def-dropdown">
+              <i class="fa-solid fa-angle-down me-3"></i>
+              12 на странице
+            </button>
+            <div class="def-dropdown-body">
+              <p class="mt-3">12 на странице</p>
+              <p>14 на странице</p>
+              <p>15 на странице</p>
+              <p>16 на странице</p>
+              <p>17 на странице</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-filter mt-5 d-block d-md-none">
+          <button class="btn title-mobile-filter c-grey fs22 m-auto d-block">
+            фильтр
+            <i class="fa-solid fa-angle-down ms-3"></i>
+          </button>
+
+          <div class="mobile-filter-body pt-3">
+
+            <for count="3" data-name="Бренд:, Объем:, Назначение:, Фактура:, Название">
+              <div class="w-100 border py-2 px-5 d-flex justify-content-between align-items-center border-radius-50 mt-3">
+                <span class="fw-bold fs20">{{name}}</span>
+                <div class="def-dropdown transparent mt-xxl-0">
+                  <button class="title-def-dropdown c-black-grey p-0">
+                    Bona AB
+                    <i class="fa-solid fa-angle-down ms-3"></i>
+                  </button>
+                  <div class="def-dropdown-body">
+                    <p class="mt-3">0.4</p>
+                    <p>0.5</p>
+                    <p>0.6</p>
+                    <p>0.7</p>
+                    <p>0.8</p>
+                    <p>0.9</p>
+                  </div>
+                </div>
+              </div>
+            </for>
+
+            <div class="cat-filter mt-2 px-3">
+              <p class="cat-filter-title">Объем, л:</p>
+
+              <div class="limit-block">
+                <input type="text" placeholder="от 1" class="border-radius-50">
+                <input type="text" placeholder="до 15" class="border-radius-50">
+              </div>
+            </div>
+
+            <div class="search-block">
+              <div class="view-count">
+                Найдено 145 товаров
+              </div>
+              <button class="btn-grey-large min">Показать все</button>
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+          <for count="9">
+            <div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+              <component src="components/product.html"></component>
+            </div>
+          </for>
+        </div>
+
+
+        <div class="row justify-content-between mt-5 align-items-center">
+          <div class="col-12 col-xl-7 row">
+            <component src="components/pagination.html"></component>
+          </div>
+          <div class="col-12 col-xl-3 d-flex justify-content-center justify-content-xl-end mt-5 mt-xl-0">
+            <button class="btn-grey-large min">Показать еще</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</section>
+
+
+
+<component src="components/footer.html"></component>
+
+
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

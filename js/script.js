@@ -328,7 +328,7 @@ questionTitle.on('click', function (){
     }
 })
 
-$('.contact-page .wrapper .slider-works').slick({
+$('.slider-works').slick({
     dots: true,
     prevArrow: `<button class="header-slider-prev"><i class="fas fa-chevron-left"></i></button>`,
     nextArrow: `<button class="header-slider-next"><i class="fas fa-chevron-right"></i></button>`,
@@ -394,29 +394,14 @@ function calcToSteps(count){
     }
 }
 
-
-
-
-// const defaultDropDown = $('.def-dropdown');
-//
-// defaultDropDown.on('click', function (){
-//     const thisElem = $(this);
-//     if(thisElem.hasClass(classes.active)){
-//         thisElem.removeClass(classes.active);
-//     } else {
-//         thisElem.addClass(classes.active);
-//     }
-// })
-
-
-// $(window).on('click', function (e){
-//     const thisClassName = e.target.className;
-//     console.log(thisClassName)
-//     if(thisClassName.includes(defaultDropDown.attr('class'))){
-//         defaultDropDown.removeClass(classes.active);
-//     }
-// })
-
+$('.title-mobile-filter').on('click', function (){
+    const thisParent = $(this).parent();
+    if(thisParent.hasClass(classes.active)){
+        thisParent.removeClass(classes.active);
+    } else {
+        thisParent.addClass(classes.active);
+    }
+})
 
 
 

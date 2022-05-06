@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/helper.css">
 
   <!--  scripts -->
   <script src="js/popper.min.js"></script>
@@ -35,7 +35,12 @@
 
 <component src="components/rent/catalog-rent.html" ></component>
 
-<component src="components/home/our-services.html"></component>
+<component src="components/home/our-services.html"
+           props='{
+              title: Наши <b>услуги</b>;
+            }'
+
+></component>
 
 <component src="components/home/form-for-call.html"></component>
 

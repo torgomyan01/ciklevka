@@ -81,7 +81,7 @@ $('#header-slider').slick({
 
 
 //---------- PARTNER SLIDER ---------------------
-$('.partners-body').slick({
+$('.partners-section .partners-body').slick({
     dots: true,
     prevArrow: `<button class="slider-prev"><i class="far fa-arrow-left"></i></button>`,
     nextArrow: `<button class="slider-next"><i class="far fa-arrow-right"></i></button>`,

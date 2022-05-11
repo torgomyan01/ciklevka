@@ -407,6 +407,28 @@ $('.title-mobile-filter').on('click', function (){
 
 
 
+const worksBlock = $('.table-our-works .works');
+const worksBlockMobile = $('.mobile-table-our-works-item');
+worksBlock.on('click', function (){
+    workBlockToggle(this, worksBlock);
+})
+
+worksBlockMobile.on('click', function (){
+    workBlockToggle(this, worksBlockMobile);
+})
+
+function workBlockToggle(elem, allElem){
+    const thisElem = $(elem);
+    if(thisElem.hasClass(classes.active)){
+        allElem.removeClass(classes.active);
+    } else {
+        allElem.removeClass(classes.active);
+        thisElem.addClass(classes.active);
+    }
+}
+
+
+
 
 
 

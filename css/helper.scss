@@ -51,15 +51,19 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
 
 // ----------------- MARGINS AND PADDINGS --------------------
 @each $size in $fontSizes {
-  @each $media, $mediaSize in $fontMedia {
-    @media (max-width: $mediaSize){
-      @each $margin, $name in $margins {
-        .#{$margin}-#{$media}-#{$size}{
-          #{$name}: #{$size / 16}rem;
-        }
-      }
+  @each $margin, $name in $margins {
+    .#{$margin}-#{$size}{
+      #{$name}: #{$size / 16}rem;
     }
   }
+  @each $padding, $name in $paddings {
+    .#{$padding}-#{$size}{
+      #{$name}: #{$size / 16}rem;
+    }
+  }
+}
+
+@each $size in $fontSizes {
   @each $media, $mediaSize in $fontMedia {
     @media (max-width: $mediaSize){
       @each $padding, $name in $paddings {
@@ -69,14 +73,13 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
       }
     }
   }
-  @each $margin, $name in $margins {
-    .#{$margin}-#{$size}{
-      #{$name}: #{$size / 16}rem;
-    }
-  }
-  @each $padding, $name in $paddings {
-    .#{$padding}-#{$size}{
-      #{$name}: #{$size / 16}rem;
+  @each $media, $mediaSize in $fontMedia {
+    @media (max-width: $mediaSize){
+      @each $margin, $name in $margins {
+        .#{$margin}-#{$media}-#{$size}{
+          #{$name}: #{$size / 16}rem;
+        }
+      }
     }
   }
 }
@@ -95,4 +98,12 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
 }
 .h-125{
   height: 7.8125rem;
+}
+
+.w-35-p{
+  width: 40% !important;
+}
+
+.w-85{
+  width: 85%;
 }

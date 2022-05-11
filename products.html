@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Стоимость наших работ</title>
+</head>
+<body>
+
+
+<component src="components/header2.html" props='{
+    link1:  Информация;
+    link2: ;
+}'></component>
+<component src="components/mobile-menu.html"></component>
+
+<div class="wrapper max-wrapper mt-0 mt-md-5">
+  <h1 class="fs30 fs65-md">
+    <b>Товары </b>
+  </h1>
+
+  <div class="row mt-3">
+    <for count="9" data-name="Bona AB,Loba,Osmo,NPT,Lechner,Probond,Klingspor,Probond,Klingspor ">
+      <div class="col f-s-c mt-2">
+        <label class="def-checkbox hide-text mt-0">
+          <input type="checkbox">
+          <span class="checking me-2">
+            <i class="far fa-check"></i>
+          </span>
+          <span class="text text-nowrap">
+            {{name}}
+          </span>
+        </label>
+      </div>
+    </for>
+    <div class="col c-grey fs14 mt-2 text-nowrap">
+      <span class="border-bottom-dashed pb-2 cursor-pointer">
+        Показаь все
+        <i class="fa-regular fa-arrow-down ms-2"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <for count="5"
+         data-images="1,2,3,4,5"
+         data-subtitle="(оптом и в розницу), , (оптом и в розницу), , (оптом и в розницу)"
+          data-title="
+          Продажа паркетной химии,
+          Продажа расходных материалов,
+          Продажа напольных покрытий,
+          Комплектующие,
+          Дополнительно
+"
+    >
+      <div class="col-12 col-sm-6 col-xl-4 f-c-c">
+        <div class="products-item mb-4" style="background-image: url(images/products/{{images}}.png)">
+          <div class="product-body">
+            <h3 class="fs25 c-while text-decoration-underline w-85">{{title}}</h3>
+            <h4 class="fs16 mt-2 c-while mb-3">{{subtitle}}</h4>
+            <p class="mb-2">
+              <span class="c-while fs18 border-bottom-dashed-while pb-2">Пороги</span>
+            </p>
+            <p class="mb-2">
+              <span class="c-while fs18 border-bottom-dashed-while pb-2">Плинтуса</span>
+            </p>
+            <p class="mb-2">
+              <span class="c-while fs18 border-bottom-dashed-while pb-2">Фанера</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </for>
+  </div>
+
+</div>
+
+
+<component src="components/footer.html"></component>
+
+
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

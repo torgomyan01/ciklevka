@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Стоимость наших работ</title>
+</head>
+<body>
+
+
+<component src="components/header2.html" props='{
+    link1:  Информация;
+    link2: ;
+}'></component>
+<component src="components/mobile-menu.html"></component>
+
+<div class="wrapper max-wrapper mt-0 mt-md-5">
+  <h1 class="fs30 fs65-md text-center">
+    <b>Стоимость наших</b> работ
+  </h1>
+
+  <div class="table-our-works">
+
+    <div class="header">
+      <div class="item">
+        Название услуги
+      </div>
+      <div class="item">
+        Ед.
+      </div>
+      <div class="item">
+        Стоимость
+      </div>
+      <div class="item text-center">
+        <p class="text-center fw-bold mb-0">-10%</p>
+        Скидка через сайт
+      </div>
+    </div>
+
+    <for count="5" data-name="
+    Реставрация и обработка старых полов,
+    Подготовительные работы,
+    Профессиональный 2D 3D Дизайн с декатировкой паркета,
+    Клиниг и обслуживание частных и корпоративных клиентов,
+    Аренда оборудования
+">
+      <div class="works">
+        <p class="title">
+          <span class="me-2 fw-bold">{{name}}в</span>
+          <span class="solid"></span>
+        </p>
+        <div class="work-body">
+          <div class="works-body">
+            <div class="item pl-20">Укладка инженерной доски</div>
+            <div class="item">1 м2</div>
+            <div class="item">199 руб</div>
+            <div class="item">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+              <i class="far fa-check"></i>
+            </span>
+              </label>
+            </div>
+          </div>
+          <div class="works-body">
+            <div class="item pl-20">Укладка инженерной доски</div>
+            <div class="item">1 м2</div>
+            <div class="item">199 руб</div>
+            <div class="item">
+              <label class="def-checkbox">
+                <input type="checkbox">
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="works-body">
+            <div class="item pl-20">Укладка инженерной доски</div>
+            <div class="item">1 м2</div>
+            <div class="item">199 руб</div>
+            <div class="item">
+              <span class="c-grey fs16 border-bottom-dashed text-center">Оставить заявку</span>
+            </div>
+          </div>
+          <div class="works-body">
+            <div class="item pl-20">Укладка инженерной доски</div>
+            <div class="item">1 м2</div>
+            <div class="item">199 руб</div>
+            <div class="item">
+              <span class="c-grey fs16 border-bottom-dashed text-center">Оставить заявку</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </for>
+
+  </div>
+
+
+
+  <div class="mobile-table-our-works mt-30">
+    <for count="5"
+         data-name="
+          Реставрация и обработка старых полов,
+          Подготовительные работы,
+          Профессиональный 2D 3D Дизайн с декатировкой паркета,
+          Клиниг и обслуживание частных и корпоративных клиентов,
+          Аренда оборудования
+      ">
+      <div class="mobile-table-our-works-item">
+        <div class="title">
+          <span class="me-2 fw-bold">
+            <i class="fa-solid fa-angle-down me-2"></i>
+            {{name}}
+          </span>
+          <span class="solid"></span>
+        </div>
+        <div class="mobile-table-our-works-body">
+          <div class="row">
+            <div class="col-5 fw-bold c-black">
+              Название услуги
+            </div>
+            <div class="col-3 fw-bold c-black">
+              Цена
+            </div>
+            <div class="col-4 text-center c-black">
+              <p class="fs12 fw-bold">-10% скидка</p>
+              <p class="fs8">через сайт</p>
+            </div>
+          </div>
+          <for count="2">
+            <div class="row">
+              <div class="col-5 c-black">
+                Укладка
+                инженерной доски
+              </div>
+              <div class="col-3 c-black">
+                199 ₽/1 м2
+              </div>
+              <div class="col-4 f-c-c">
+                <label class="def-checkbox">
+                  <input type="checkbox">
+                  <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+                </label>
+              </div>
+            </div>
+          </for>
+          <for count="2">
+            <div class="row">
+              <div class="col-5 c-black">
+                Укладка
+                инженерной доски
+              </div>
+              <div class="col-3 c-black">
+                199 ₽/1 м2
+              </div>
+              <div class="col-4 f-c-c">
+                <p class="text-center border-bottom-dashed c-grey">Оставить заявку</p>
+              </div>
+            </div>
+          </for>
+        </div>
+      </div>
+    </for>
+  </div>
+</div>
+
+<component src="components/home/form-for-call.html"></component>
+
+<component src="components/footer.html"></component>
+
+
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

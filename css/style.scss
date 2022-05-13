@@ -1036,7 +1036,6 @@ header {
     overflow: hidden;
     height: auto;
     
-    margin-top: 2.5rem;
     text-align: center;
 
     &.close {
@@ -1077,7 +1076,7 @@ header {
   margin-top: 6.25rem;
   margin-bottom: 3.125rem;
   @media (max-width: $md) {
-    margin-top: 5.25rem;
+    margin-top: 0;
   }
 
   .restoration-block {
@@ -1116,6 +1115,9 @@ header {
         width: calc((100% / 2) - 1.25rem);
       }
       @media (max-width: $md) {
+        &:nth-of-type(1){
+          margin-top: 0;
+        }
         &:nth-of-type(3), &:nth-of-type(4) {
           display: none;
         }
@@ -1161,7 +1163,7 @@ header {
 
 .installation-installation-floors {
   width: 100%;
-  margin-top: 6.25rem;
+  margin-top: 3.25rem;
 
   .installation-floors-body {
     margin-top: 1.875rem;
@@ -2483,6 +2485,109 @@ footer {
   }
 }
 
+.bg-image-rent{
+  background-image: url(../images/rent-bg.png);
+  background-size: contain;
+  background-position: 50% 0;
+  background-color: transparent;
+  background-repeat: repeat-y
+}
+
+.content-catalog{
+  width: 100%;
+  height: auto;
+  margin-top: 6.25rem;
+  @include flex('sb', 's');
+  flex-wrap: wrap;
+  .item{
+    @include col(3,1rem);
+    height: 56.25rem;
+    border-radius: 25px;
+    filter: drop-shadow(0px 1px 27px rgba(0,0,0,0.05));
+    background-image: linear-gradient(0deg, #e4bc95 1%, #fff, #fff 100%);
+    padding: 20px;
+    margin-top: 1.875rem;
+    margin-right: 0.9375rem;
+    @media (max-width: $xxl){
+      @include col(4,1rem);
+    }
+    @media (max-width: $xl){
+      @include col(6,1rem);
+    }
+    @media (max-width: $sm){
+      @include col(12,1rem);
+    }
+    .img-block{
+      width: 100%;
+      height: 17.5rem;
+      @include bg;
+      border-radius: 1.5625rem;
+      position: relative;
+    }
+    .title{
+      font-size: 1.5rem;
+      text-decoration: underline;
+      color: #282728;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+    .text{
+      width: 100%;
+      height: 80px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 1.25rem;
+      transition: 0.3s;
+      &.active{
+        height: auto;
+        position: absolute;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.8);
+        width: calc(100% - 49px);
+        padding: 0.9375rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 11px #8b8b8b;
+        transform: translate(-1.875rem, 6.875rem);
+        backdrop-filter: blur(10px);
+        max-height: 18.75rem;
+        overflow-y: auto;
+        &:after{
+          display: none;
+        }
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, #ffffff, transparent);
+      }
+    }
+    .content{
+      width: calc(100% - 4rem);
+      margin: 0 auto;
+    }
+    .price-block{
+      width: 100%;
+      margin-top: 1rem;
+      @include flex('sb', 'c');
+      .price-title{
+        font-size: 1rem;
+        color: #282728;
+      }
+      .price{
+        font-size: 1.875rem;
+        color: #a67d52;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 .catalog-rent{
   width: 100%;
   height: auto;
@@ -2498,100 +2603,6 @@ footer {
     }
   }
 
-  .content-catalog{
-    width: 100%;
-    height: auto;
-    margin-top: 6.25rem;
-    @include flex('sb', 's');
-    flex-wrap: wrap;
-    .item{
-      @include col(3,1rem);
-      height: 56.25rem;
-      border-radius: 25px;
-      filter: drop-shadow(0px 1px 27px rgba(0,0,0,0.05));
-      background-image: linear-gradient(0deg, #e4bc95 1%, #fff, #fff 100%);
-      padding: 20px;
-      margin-top: 1.875rem;
-      margin-right: 0.9375rem;
-      @media (max-width: $xxl){
-        @include col(4,1rem);
-      }
-      @media (max-width: $xl){
-        @include col(6,1rem);
-      }
-      @media (max-width: $md){
-        @include col(12,1rem);
-      }
-      .img-block{
-        width: 100%;
-        height: 17.5rem;
-        @include bg;
-        border-radius: 1.5625rem;
-        position: relative;
-      }
-      .title{
-        font-size: 1.5rem;
-        text-decoration: underline;
-        color: #282728;
-        font-weight: bold;
-        margin-top: 1.5rem;
-        text-align: left;
-      }
-      .text{
-        width: 100%;
-        height: 80px;
-        position: relative;
-        overflow: hidden;
-        margin-top: 1.25rem;
-        transition: 0.3s;
-        &.active{
-          height: auto;
-          position: absolute;
-          z-index: 1000;
-          background: rgba(255, 255, 255, 0.8);
-          width: calc(100% - 49px);
-          padding: 0.9375rem;
-          border-radius: 10px;
-          overflow: hidden;
-          box-shadow: 2px 2px 11px #8b8b8b;
-          transform: translate(-1.875rem, 6.875rem);
-          backdrop-filter: blur(10px);
-          max-height: 18.75rem;
-          overflow-y: auto;
-          &:after{
-            display: none;
-          }
-        }
-        &:after{
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 80%;
-          left: 0;
-          bottom: 0;
-          background: linear-gradient(0deg, #ffffff, transparent);
-        }
-      }
-      .content{
-        width: calc(100% - 4rem);
-        margin: 0 auto;
-      }
-      .price-block{
-        width: 100%;
-        margin-top: 1rem;
-        @include flex('sb', 'c');
-        .price-title{
-          font-size: 1rem;
-          color: #282728;
-        }
-        .price{
-          font-size: 1.875rem;
-          color: #a67d52;
-          font-weight: bold;
-        }
-      }
-    }
-  }
   .open-close-info-catalog-item{
     color: $c-grey;
     cursor: pointer;
@@ -3378,7 +3389,7 @@ footer {
   .step-loader-body{
     height: 100%;
     background: $c-grey url(../images/icons/lines-loading.png) repeat-x center center;
-    background-size: contain;
+    background-size: auto;
     border-radius: 1.5rem;
     transition: 0.2s;
   }
@@ -4177,6 +4188,117 @@ footer {
     background-color: #000000cf;
     transition: 0.3s;
     color: #fff;
+  }
+}
+
+
+
+.calculate-block{
+  width: 100%;
+  height: 1000px;
+  border-radius: 3.125rem;
+  background-color: #f3f2f2;
+  padding: 4.3125rem 7.4375rem;
+  .select__body{
+    width: 100%;
+  }
+  .select__body__content{
+    width: 100%;
+    height: 35.75rem;
+    overflow-y: auto;
+  }
+
+  .selected__calc__item{
+    width: 100%;
+    height: 4.1875rem;
+    @include flex('s', 'c');
+    border-radius: 0.9375rem;
+    background-color: #ffffff;
+    padding-left: 1rem;
+    color: #d7d6d6;
+    margin-top: 1.1875rem;
+    transition: 0.3s;
+    overflow: hidden;
+    &.max{
+      height: 7.125rem;
+    }
+    &.active{
+      background-color: $c-grey;
+      color: #fff;
+      .selected__calc__item__check{
+        background-color: #fff;
+        i{
+          color: $c-grey;
+        }
+        .fa-check{
+          display: block;
+        }
+        .fa-question{
+          display: none;
+        }
+      }
+    }
+    .selected__calc__item__check{
+      border-radius: 1.875rem;
+      margin-right: 0.625rem;
+      color: #d7d6d6;
+      height: 2.25rem;
+      width: 2.25rem;
+      @include flex('c', 'c');
+      background-color: #f4f7fa;
+      transition: 0.3s;
+      i{
+        transition: 0.3s;
+      }
+      .fa-check{
+        display: none;
+      }
+      .fa-question{
+        display: block;
+      }
+    }
+  }
+}
+
+.calc__radio{
+  width: 100%;
+  height: 14.375rem;
+  border-radius: 1.25rem;
+  background-color: #ededed;
+  position: relative;
+  @include bg;
+  margin-top: 1.25rem;
+  input{
+    display: none;
+  }
+  input:checked ~ .calc_dr__body .active__inactive{
+    background-color: $c-grey;
+    i{
+      color: #fff;
+    }
+  }
+  .calc_dr__body{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 50%;
+    bottom: -1.25rem;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50px;
+    @include flex('c', 'c');
+    .active__inactive{
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 20px;
+      background-color: #f4f7fa;
+      @include flex('c', 'c');
+      transition: 0.3s;
+      i{
+        transition: 0.3s;
+        color: #d7d6d6;
+      }
+    }
   }
 }
 

@@ -1,0 +1,165 @@
+<div class="wrapper max-wrapper">
+  <h4 class="fs48 text-center c-black mt-80 mb-50">
+    <b>Рассчитайте стоимость</b> циклевки вашего <br>
+    паркета on-line в трех ценовых вариантах
+  </h4>
+
+
+  <div class="calculate-block">
+    <div class="row justify-content-between">
+      <div class="col-8">
+        <div class="step-loader">
+          <div class="step-loader-body" style="width: 14%"></div>
+          <span class="step-count">Шаг <b id="step-count">1</b> из 7</span>
+        </div>
+        <div class="select__body">
+          <h3 class="text-center fs36 mt-30 mb-20 c-black" id="calc-titles-step">Где требуется циклевка?</h3>
+          <p class="text-center fs16 c-black mt-15" id="subtitle-calc"></p>
+          <div class="select__body__content ">
+
+            <div class="pr-20" id="calc-step1">
+              <div class="row">
+                <for count="9"
+                     data-name="Квартира,Дом,Спортзал,Квартира,Дом,Спортзал,Квартира,Дом,Спортзал"
+                     data-images="1,2,3,1,2,3,1,2,3"
+                >
+                  <div class="col-4">
+                    <label class="calc__radio" style="background-image: url(images/calc/{{images}}.png)">
+                      <input type="radio" name="wood-working">
+                      <span class="calc_dr__body">
+                    <span class="active__inactive">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
+                    </label>
+                    <p class="fs18 c-black mt-20 text-center">{{name}}</p>
+                  </div>
+                </for>
+              </div>
+
+            </div>
+
+            <div class="pr-20 d-none" id="calc-step2">
+              step 2
+            </div>
+            <div class="pr-20 d-none" id="calc-step3">
+              step 3
+            </div>
+            <div class="pr-20 d-none" id="calc-step4">
+              step 4
+            </div>
+            <div class="pr-20 d-none" id="calc-step5">
+              step 5
+            </div>
+            <div class="pr-20 d-none" id="calc-step6">
+              step 6
+            </div>
+            <div class="pr-20 d-none" id="calc-step7">
+              step 7
+            </div>
+          </div>
+          <div class="row justify-content-between mt-40">
+            <div class="col-5 d-flex justify-content-start align-items-start">
+              <img src="images/cursor.png" alt="cursor" class="me-2">
+              <div>
+                <p class="fs16 fw-bold c-black">Нажимайте на вариант ответа</p>
+                <p class="fs16 c-black mt-1">
+                  и переходите к следующему <br>
+                  вопросу чтобы поулить расчет
+                </p>
+              </div>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+              <button class="btn-while-large text-uppercase me-3 d-none" id="prev-calc-step">назад</button>
+              <button class="btn-grey-large text-uppercase" id="next-calc-step">
+                Далее
+                <i class="fa-solid fa-angle-right c-while opacity-25 me-1 ms-2"></i>
+                <i class="fa-solid fa-angle-right c-while opacity-75 me-1"></i>
+                <i class="fa-solid fa-angle-right c-while"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-start align-items-start">
+          <img src="images/calc/online-manager.png" alt="manager" class="me-3">
+          <div class="c-black">
+            <h3 class="fa20 fw-bold mb-20 mt-20">
+              Михаил
+            </h3>
+            <p class="fs12">Главный инженер компании</p>
+            <p class="mt-20 fs14 fw-bold">
+              Здравствуйте, меня зовут
+              Михаил, и я помогу вам
+              рассчитать стоимость в трех
+              ценовых вариантах с точностью 97%
+            </p>
+          </div>
+        </div>
+
+        <div class="w-100 mt-50">
+
+          <div class="selected__calc__item active">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Ваш объект
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Площадь
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Основные работы
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Дополнительные работы
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Плинтуса
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Срочность
+          </div>
+          <div class="selected__calc__item max">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Расчет <br>
+            стоимости в <br>
+            3х вариантах
+            <img src="images/calc/qount.png" alt="qount" class="mt-80">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

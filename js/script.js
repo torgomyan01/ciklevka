@@ -14,7 +14,6 @@ const classes = {
 class StepsEvent {
     constructor(stepAddress, activeStep) {
         this.stepStart = activeStep;
-        this.stepEnd = stepAddress.length;
         this.stepAddress = stepAddress;
 
         // CLOSE ALL STEPS BLOCKS
@@ -36,7 +35,7 @@ class StepsEvent {
     }
 
     nextStep(calBack = null){
-        if(this.stepStart < this.stepAddress.length){
+        if(this.stepStart < this.stepAddress.length - 1){
             this._closeAllStep();
             this.stepStart = this.stepStart + 1;
             const nextStepBlock = document.querySelectorAll(this.stepAddress[this.stepStart]);
@@ -244,6 +243,89 @@ shippingPaymentTitleItems.on('click', function (){
 //---------- OUR WORKS CATEGORIES  ---------------------
 
 
+const calcTitles = [
+    {
+        title: 'Где требуется циклевка?',
+        subTitle: ''
+    },
+    {
+        title: 'Укажите общую площадь?',
+        subTitle: ''
+    },
+    {
+        title: 'Какие работы необходимо сделать?',
+        subTitle: '(можно выбрать несколько)'
+    },
+    {
+        title: 'Какое покрытие вы планируете?',
+        subTitle: ''
+    },
+    {
+        title: 'Требуется ли изменение цвета дерева?',
+        subTitle: ''
+    },
+    {
+        title: 'Где находится ваш объект?',
+        subTitle: ''
+    },
+    {
+        title: 'Куда вам отправить 3 варианта сметы?',
+        subTitle: ''
+    }
+]
+
+const CalcStepId = ['#calc-step1','#calc-step2','#calc-step3','#calc-step4', '#calc-step5','#calc-step6','#calc-step7'];
+
+
+const CalcPageSteps = new StepsEvent(CalcStepId, 0);
+const nextCalc = $('#next-calc-step');
+const prevCalc = $('#prev-calc-step');
+const loadingBlockCalc = $('.calculate-block .step-loader .step-loader-body');
+const stepCount = $('#step-count');
+const stepsCount = 100 / CalcStepId.length;
+const calcTitle = $('#calc-titles-step');
+const calcSubtitle = $('#subtitle-calc');
+const activateItems = $('.calculate-block .selected__calc__item');
+
+
+nextCalc.on('click', function (){
+    CalcPageSteps.nextStep((count) => {
+        calcCount(count);
+    })
+})
+
+prevCalc.on('click', function (){
+    CalcPageSteps.prevStep((count) => {
+        calcCount(count);
+    })
+})
+
+
+function calcCount(count){
+    const countPlus = count + 1;
+
+    countPlus > 1 ? prevCalc.removeClass('d-none') : prevCalc.addClass('d-none');
+
+    countPlus === CalcStepId.length ? nextCalc.addClass('d-none') : nextCalc.removeClass('d-none');
+
+    loadingBlockCalc.css('width', `${stepsCount * countPlus}%`);
+    stepCount.text(countPlus);
+    calcTitle.text(
+        calcTitles[count].title
+    )
+    calcSubtitle.text(
+        calcTitles[count].subTitle
+    )
+    activateItems.removeClass(classes.active);
+    activateItems.map((index, elem) => {
+        if(index < countPlus){
+            $(elem).addClass(classes.active);
+        }
+    })
+}
+
+
+
 //---------- reviews-section ---------------------
 
 $('.reviews-section .reviews').slick({
@@ -369,7 +451,7 @@ cardProductMinus.on('click', function (){
 const cardSteps = ['#step1', '#step2'];
 const cardsPageSteps = new StepsEvent(cardSteps, 0);
 const next = $('#next-step');
-const prev = $('#prev-step')
+const prev = $('#prev-step');
 const loadingBlock = $('.step-loader .step-loader-body');
 
 next.on('click', function (){

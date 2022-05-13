@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Партнёры</title>
+</head>
+<body>
+
+
+<component src="components/header2.html" props='{
+    link1: <b>Отзывы</b>;
+    link2: ;
+}'></component>
+<component src="components/mobile-menu.html"></component>
+
+
+<div class="wrapper max-wrapper mt-10 mt-md-80">
+  <h1 class="fs30 fs65-md text-center">
+    Наши <b>услуги</b>
+  </h1>
+
+  <h1 class="fs30 fs80-md c-grey mb-20 text-center mt-10 mt-md-100 fw-light">
+    Реставрация и обработка старых полов
+  </h1>
+  <component src="components/home/our-services.html" props='{title: ; }'></component>
+
+  <component src="components/home/restoration-treatment-floors.html" props='{title: ;}'
+  ></component>
+
+  <h1 class="fs30 fs80-md c-grey mb-20 text-center mt-10 mt-md-100 fw-light">
+    Устройство или укладка новых полов
+  </h1>
+  <component src="components/home/our-services.html" props='{title: ;}' ></component>
+
+  <section class="installation-installation-floors">
+    <div class="wrapper max-wrapper">
+      <h1 class="text-center c-grey">Устройство или укладка новых полов</h1>
+      <div class="installation-floors-body">
+
+        <for count="6"
+             data-images="1,2,3,4,5,6"
+             data-titles="Укладка декора, Укладка штучного паркета, Укладка массивной доски,Укладка инженерной доски, Укладка ламината (плавучая), Стяжка / Фанера"
+             data-tag="'',(плавучая система),'','',(плавучая),''"
+        >
+
+          <div class="item" style="background-image: url(images/home/installation-installation-floors/{{images}}.png)">
+            <h3 class="title fs30">{{titles}}</h3>
+            <p class="fs16 c-black">{{tag}}</p>
+            <button class="btn price-btn fw-bolder mt-4">
+              от <b class="fs30">459</b> руб/м2
+            </button>
+            <p class="fs12 c-black mt-2">*без расходных материалов</p>
+            <button class="btn-call-green fs16 mt-4">
+              <img src="images/icons/whatsup.png" alt="icon WhatsUp" class="me-2">
+              Спросить в WhatsApp
+            </button>
+          </div>
+
+        </for>
+
+      </div>
+    </div>
+  </section>
+
+
+  <h1 class="fs40 fs80-md c-grey mb-0 mb-md-4 text-center mt-30 mt-md-100 fw-light">
+    Подготовительные работы
+  </h1>
+  <component src="components/home/our-services.html" props='{title: ;}' ></component>
+
+  <div class="row mb-30">
+    <for count="4"
+         data-title="Уход за полом,Стяжка пола,Укладка фанеры, Шлифовка фанеры"
+         data-images="1,2,3,4"
+    >
+      <div class="col-12 col-md-6 col-xl-3 mt-4">
+        <div class="w-100 bg-image h-500 border-radius-25 pt-58 pb-30 pl-65 pr-65" style="background-image: url(images/our-services/{{images}}.png)">
+          <h3 class="fs30 text-decoration-underline c-black ">{{title}}</h3>
+          <button class="btn price-btn fw-bolder mt-4">
+            от <b class="fs30">459</b> руб/м2
+          </button>
+          <p class="fs12 c-black mt-2">*без расходных материалов</p>
+          <button class="btn-call-green fs16 mt-4">
+            <img src="images/icons/whatsup.png" alt="icon WhatsUp" class="me-2">
+            Спросить в WhatsApp
+          </button>
+        </div>
+      </div>
+    </for>
+  </div>
+
+
+  <component src="components/home/our-services.html" props='{title: ;}' ></component>
+
+  <div class="row mb-30 mt-20">
+    <div class="col-12">
+      <div class="w-100 bg-image h-500 border-radius-25 pt-58 pb-30 pl-65 pr-65" style="background-image: url(images/our-services/2d-3d.png)">
+        <h3 class="fs30 text-decoration-underline c-black ">
+          Профессиональный 2D 3D
+          Дизайн с декатировкой паркета
+        </h3>
+        <button class="btn price-btn fw-bolder mt-4">
+          от <b class="fs30">459</b> руб/м2
+        </button>
+        <p class="fs12 c-black mt-2">*без расходных материалов</p>
+        <button class="btn-call-green fs16 mt-4">
+          <img src="images/icons/whatsup.png" alt="icon WhatsUp" class="me-2">
+          Спросить в WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="fs30 fs80-md c-grey mb-20 text-center mt-10 mt-md-100 fw-light">
+    Клиниг и обслуживание частных
+    и корпоративных клиентов
+  </h1>
+  <component src="components/home/our-services.html" props='{title: ;}' ></component>
+
+  <div class="row mb-30 mt-20">
+    <div class="col-12">
+      <div class="w-100 bg-image border-radius-25 pt-58 pb-30 pl-20 pl-md-65 pr-20 pr-md-65" style="background-image: url(images/our-services/book-section.png)">
+        <h3 class="fs30 text-decoration-underline c-black ">
+          Клиниг и обслуживание частных <br>
+          и корпоративных клиентов
+        </h3>
+        <div class="row mt-5 align-items-end">
+          <div class="col-12 col-md-6 col-lg-3">
+            <for count="6"
+                 data-title="
+                  Шлифовка паркета,
+                  Клининг по абонентскому обслуживанию,
+                  Горация свежего вида полов всегда,
+                  Уход за полами покрытыми маслом,
+                  Уход за полами покрытыми лаком,
+                  Квартира полы
+                  "
+            >
+              <p class="fs18 pb-1 c-black mb-15">
+              <span class="border-bottom-dashed">{{title}}</span>
+              </p>
+            </for>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <for count="6"
+                 data-title="
+                  Уход ежедневный,
+                  Уход еженедельный,
+                  Уход чистка ежемесячно,
+                  Уход чистка ежеквартально,
+                  Уход чистка защита ежегодно,
+                  Что такое рабочий слой пол
+                  "
+            >
+              <p class="fs18 pb-1 c-black mb-15">
+                <span class="border-bottom-dashed">{{title}}</span>
+              </p>
+            </for>
+          </div>
+          <div class="col-12 col-lg-3 f-c-c flex-column">
+            <button class="btn-call-green fs16 mt-4">
+              <img src="images/icons/whatsup.png" alt="icon WhatsUp" class="me-2">
+              Спросить в WhatsApp
+            </button>
+            <a href="#">
+              <p class="text-center mt-20">
+              <span class="border-bottom-dashed c-grey">
+                Оставить заявку
+                <i class="fa-regular fa-arrow-right ms-2"></i>
+              </span>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <component src="components/home/form-for-call.html"></component>
+
+</div>
+
+
+
+
+<component src="components/footer.html"></component>
+
+
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

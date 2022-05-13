@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Акции и скидки</title>
+</head>
+<body>
+
+
+<component src="components/header2.html" props='{
+    link1: Корзина;
+    link2: ;
+}'></component>
+<component src="components/mobile-menu.html"></component>
+
+
+
+<div class="wrapper max-wrapper mt-20 mt-md-80">
+  <h1 class="fs30 fs65 text-center">
+    <b>Акции</b> и скидки
+  </h1>
+
+  <div class="row mt-50 justify-content-between">
+    <div class="col-12 col-lg-5 col-xl-6">
+      <div class="row">
+          <for count="8">
+            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                <component src="components/product.html"></component>
+            </div>
+          </for>
+      </div>
+      <div class="f-c-c mt-3 mb-100">
+        <component src="components/pagination.html"></component>
+      </div>
+    </div>
+    <div class="col-12 col-lg-7 col-xl-6">
+      <for count="2" data-title="В подарок паркетный лак Bona Wave,Плинтусы БЕСПЛАТНО!" data-images="1,2">
+        <div class="bg-image w-100 border-radius-45 pt-62 pl-40 pl-md-62 pr-20 pb-40 mb-30" style="background-image: url(images/action-{{images}}.png)">
+          <div class="pr-20 pr-md-100">
+            <h1 class="fs36 c-black mb-25">
+              <b>{{title}}</b>
+            </h1>
+            <p class="fs18 c-black mb-25">
+              <b>При заказе шлифовки паркета</b> в подарок
+              Вы получаете лучшую шведскую химию -
+              паркетный лак Bona Wave!
+            </p>
+            <p class="fs12 c-black">
+              * Подробную информацию об условиях и сроках
+              проведения акции Вы можете уточнить у наших
+              менеджеров по телефону +7 (495) 505-52-22.
+            </p>
+            <button class="btn-grey-large mt-25">Позвонить: +7 (495) 505-52-22</button>
+          </div>
+        </div>
+      </for>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<component src="components/footer.html"></component>
+
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

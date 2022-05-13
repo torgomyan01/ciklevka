@@ -65,7 +65,7 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
 
 @each $size in $fontSizes {
   @each $media, $mediaSize in $fontMedia {
-    @media (max-width: $mediaSize){
+    @media (min-width: $mediaSize){
       @each $padding, $name in $paddings {
         .#{$padding}-#{$media}-#{$size}{
           #{$name}: #{$size / 16}rem;
@@ -74,7 +74,7 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
     }
   }
   @each $media, $mediaSize in $fontMedia {
-    @media (max-width: $mediaSize){
+    @media (min-width: $mediaSize){
       @each $margin, $name in $margins {
         .#{$margin}-#{$media}-#{$size}{
           #{$name}: #{$size / 16}rem;
@@ -98,6 +98,9 @@ $paddings: ("p": "padding", "pt": "padding-top", "pr": "padding-right", "pb": "p
 }
 .h-125{
   height: 7.8125rem;
+}
+.min-h-450{
+  min-height: 28.125rem;
 }
 
 .w-35-p{

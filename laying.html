@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Рассчитайте стоимость</title>
+</head>
+<body>
+
+<component src="components/header.html" props='
+  headerBody: <component src="components/headers/header-tinting.html"></component>;
+  backgroundUrl: images/tinting/laying.png;
+'></component>
+<component src="components/mobile-menu.html"></component>
+
+<component src="components/calc.html"></component>
+
+<div class="product-page">
+  <div class="wrapper max-wrapper mt-50 mb-50 overflow-hidden">
+
+    <component src="components/home/our-services.html"
+               props='
+              title: Оказываем <b>полный комплекс</b> услуг по укладке ;
+            '
+    ></component>
+
+    <component src="components/landing/wood-category.html"></component>
+
+    <h1 class="fs35 fs65-md text-center mb-58 mt-99">
+      Мы <b>посвятили укладке</b> паркета всю свою жизнь!
+    </h1>
+
+    <div class="row">
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <div class="h-450 w-100 border-radius-25 bg-image" style="background-image: url(images/tinting/img4.png)"></div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <div class="h-450 w-100 border-radius-25 bg-image" style="background-image: url(images/tinting/img3.png)"></div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-3">
+        <div class="h-450 w-100 border-radius-25 bg-image" style="background-image: url(images/tinting/img2.png)"></div>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 ">
+        <div class="h-450 w-100 border-radius-25 bg-image" style="background-image: url(images/tinting/img1.png)"></div>
+      </div>
+    </div>
+
+    <div class="mt-99">
+      <component src="components/home/after-before.html"></component>
+    </div>
+
+    <div class="row mt-80">
+      <div class="col-12 col-xl-5 mb-5 mb-xl-0">
+        <h1 class="fs30 fs65-md text-center text-md-start">
+          <b>Остерегайтесь</b>
+          <br>
+          мошенников
+        </h1>
+        <h3 class="fs32 c-black fw-bold mt-40 text-center text-md-start">
+          Получите бесплатно инструкцию:
+        </h3>
+        <p class="fs32 c-black mt-2 text-center text-md-start">
+          "ТОП-6 правил как не быть
+          обманутым при заказе тонировки"
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4" style="z-index: 1;">
+        <p class="text-center fs21 c-black">
+          Куда вам удобнее отправить?
+        </p>
+        <div class="row justify-content-center mt-20">
+          <div class="col-6 d-flex justify-content-end">
+            <div class="soc-block-calc">
+              <img src="images/icons/whatsup-90.png" alt="" class="w-90">
+              What`s app
+            </div>
+          </div>
+          <div class="col-6  d-flex justify-content-start">
+            <div class="soc-block-calc">
+              <img src="images/icons/tele-90.png" alt="" class="w-90">
+              Telegram
+            </div>
+          </div>
+        </div>
+        <form action="#">
+          <div class="d-flex justify-content-center w-85 m-auto">
+            <input type="text" placeholder="+7 (___)___ - __ - __" data-mask="+7 (000)000 - 00 - 00" class="mt-3 tel-inp bgc-black-grey-length" autocomplete="off" maxlength="21">
+          </div>
+
+          <div class="f-c-c">
+            <button type="submit" class="btn-grey-large mt-20 w-85">
+              Получить инструкцию
+            </button>
+          </div>
+          <label class="fs13 d-flex justify-content-start align-items-start w-85 m-auto mt-4">
+            <label class="def-checkbox d-inline-block">
+              <input type="checkbox">
+              <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+            </label>
+            <span>
+                Нажимая кнопку вы соглашаетесь с условиями <br>
+                <span class="border-bottom-grey c-grey">Политика конфиденциальности</span>
+              </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
+        <img src="images/tinting/pdf.png" alt="pdf" class="tinting-pdf">
+      </div>
+
+    </div>
+
+
+    <component src="components/home/our-works.html"
+               props='
+              bottom: <button class="btn-grey-large fs16"> Перейти в портфолио </button></a>;
+            '
+    ></component>
+
+    <component src="components/landing/contact-block.html"></component>
+
+
+    <div class="mt-80 mb-80">
+      <component src="components/home/reviews-section.html"></component>
+    </div>
+
+    <div>
+      <component src="components/home/discounts-promotions.html"></component>
+    </div>
+
+    <div class="mt-80">
+      <component src="components/home/trust-section.html"></component>
+    </div>
+
+
+    <h1 class="fs30 fs35-md text-center mt-80">
+      <b>Часто задаваемые вопросы</b> наших клиентов
+    </h1>
+
+    <div class="tinting-owner-block">
+      <img src="images/tinting/owner.png" alt="Owner" class="tinting-owner-image">
+      <div class="question-body">
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <button class="btn-grey-large mt-5 d-block m-auto">Смотреть все</button>
+      </div>
+    </div>
+
+    <component src="components/home/form-for-call.html"></component>
+
+  </div>
+  <component src="components/home/save-to-tabe.html"></component>
+
+  <div class="wrpper">
+    <component src="components/home/our-services.html"
+               props='
+                title: <b>Тут заголовок для SEO</b> ;
+              '
+    ></component>
+  </div>
+</div>
+
+<component src="components/footer.html"></component>
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -28,10 +28,12 @@
 <body>
 
 
-<component src="components/header.html" props='
-  headerBody: <component src="components/headers/home-header.html"></component>;
-  backgroundUrl: images/header-bg.png;
-'></component>
+<header class="home">
+  <component src="components/header-navbar.html"></component>
+
+  <component src="components/headers/home-header.html"></component>
+</header>
+
 
 <component src="components/mobile-menu.html"></component>
 

@@ -5,7 +5,8 @@ const classes = {
     sliderButton: '.slider-button',
     containerAfter: '.container-after',
     slider: '.slider',
-    active: 'active'
+    active: 'active',
+    none: 'd-none'
 }
 
 
@@ -277,6 +278,7 @@ const calcTitles = [
 const CalcStepId = ['#calc-step1','#calc-step2','#calc-step3','#calc-step4', '#calc-step5','#calc-step6','#calc-step7'];
 
 
+
 const CalcPageSteps = new StepsEvent(CalcStepId, 0);
 const nextCalc = $('#next-calc-step');
 const prevCalc = $('#prev-calc-step');
@@ -286,7 +288,7 @@ const stepsCount = 100 / CalcStepId.length;
 const calcTitle = $('#calc-titles-step');
 const calcSubtitle = $('#subtitle-calc');
 const activateItems = $('.calculate-block .selected__calc__item');
-
+const leftMessageBlock = $('#left-message-calc');
 
 nextCalc.on('click', function (){
     CalcPageSteps.nextStep((count) => {
@@ -299,7 +301,6 @@ prevCalc.on('click', function (){
         calcCount(count);
     })
 })
-
 
 function calcCount(count){
     const countPlus = count + 1;
@@ -322,8 +323,22 @@ function calcCount(count){
             $(elem).addClass(classes.active);
         }
     })
+
+    if(count === CalcStepId.length - 1){
+        leftMessageBlock.addClass(classes.none);
+        leftMessageBlock.next().removeClass('justify-content-sm-end').addClass('justify-content-sm-start');
+    } else {
+        leftMessageBlock.removeClass(classes.none);
+        leftMessageBlock.next().removeClass('justify-content-sm-start').addClass('justify-content-sm-end');
+    }
 }
 
+
+const costWork = $('.cost-work');
+costWork.on('click', function (){
+    costWork.removeClass(classes.active);
+    $(this).addClass(classes.active);
+})
 
 
 //---------- reviews-section ---------------------
@@ -398,7 +413,7 @@ $('.open-close-info-catalog-item').on('click', function (){
 
 
 
-const questionTitle = $('.question-page .question-body .question-excerpt .question-item .title');
+const questionTitle = $('.question-body .question-excerpt .question-item .title');
 
 questionTitle.on('click', function (){
     const parent = $(this).parent();
@@ -510,6 +525,12 @@ function workBlockToggle(elem, allElem){
 }
 
 
+
+const calcTelSelect = $('.soc-block-calc');
+calcTelSelect.on('click', function (){
+    calcTelSelect.removeClass(classes.active);
+    $(this).addClass(classes.active);
+})
 
 
 

@@ -60,24 +60,20 @@
 
 <component src="components/home/trust-section.html"></component>
 
-<component src="components/home/partners-section.html"
-           props='{
-             title: Наши клиенты:;
-             subtitle: ;
-           }
-'></component>
-<component src="components/home/partners-section.html"
-           props='{
-             title: ;
-             subtitle: ;
-           }
-'></component>
-<component src="components/home/partners-section.html"
-           props='{
-             title: ;
-             subtitle: ;
-           }
-'></component>
+<div class="wrapper max-wrapper">
+  <h1 class="fs30 fs65-md text-center mt-80">
+    Наши <b>клиенты:</b>
+  </h1>
+
+  <div class="partners-body">
+    <for count="18" data-images="1,2,4,5,6,7,8,1,2,4,5,6,7,8,1,2,4,5,6">
+      <div class="item">
+        <img src="images/partners/{{images}}.png" alt="Partner1">
+        <p>Описание в какой сфере партнер</p>
+      </div>
+    </for>
+  </div>
+</div>
 <component src="components/home/form-for-call.html"></component>
 
 <component src="components/footer.html"></component>

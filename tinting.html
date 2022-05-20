@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Рассчитайте стоимость</title>
+</head>
+<body>
+
+<component src="components/header.html" props='
+  headerBody: <component src="components/headers/header-tinting.html"></component>;
+  backgroundUrl: images/tinting/header.png;
+'></component>
+<component src="components/mobile-menu.html"></component>
+
+<component src="components/calc.html"></component>
+
+<div class="product-page">
+
+  <div class="wrapper max-wrapper mt-50 mb-50 ">
+    <h1 class="fs30 fs65-md c-black text-center">
+      Для нанесения тонировки мы используем
+      рецептуры и цветовые решения <b>созданные
+      лучшими дизайнерами европы</b>
+    </h1>
+    <p class="mt-20 fs30 c-black text-center">
+      Верно подобранные лаки / масла позволят затонировать паркет без пятен и полос,
+      а также обеспечат надежное сцепление слоев и защиту от выгорания
+    </p>
+
+
+    <div class="row mt-50">
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="tinting-brands black-grey">
+          Osmo
+          <img src="images/tinting/brand4.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="tinting-brands grey">
+          Bona
+          <img src="images/tinting/brand3.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="tinting-brands black-grey">
+          Loba
+          <img src="images/tinting/brand2.png" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="tinting-brands grey">
+          Berger
+          <img src="images/tinting/brand1.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <h1 class="fs30 fs65-md c-black text-center mt-80">
+      <b>Образцы</b> тонировок
+    </h1>
+
+
+    <div class="wood-types mt-40">
+
+      <div class="item">
+        <img src="images/tinting/wood-type5.png" alt="wood-type1">
+        Heading 3
+      </div>
+      <div class="item">
+        <img src="images/tinting/wood-type4.png" alt="wood-type1">
+        Heading 3
+      </div>
+      <div class="item">
+        <img src="images/tinting/wood-type3.png" alt="wood-type1">
+        Heading 3
+      </div>
+      <div class="item">
+        <img src="images/tinting/wood-type2.png" alt="wood-type1">
+        Heading 3
+      </div>
+      <div class="item">
+        <img src="images/tinting/wood-type1.png" alt="wood-type1">
+        Heading 3
+      </div>
+
+    </div>
+
+
+    <component src="components/home/our-services.html"
+               props='
+              title: <b>Стоимость работ</b> и что входит;
+            '
+    ></component>
+
+
+    <div class="row mt-50">
+      <for count="6" data-imageurl="1,2,3,4,5,6" data-name="Инженерная доска,Паркетная доска,Штучный паркет,Массивная доска,Фанера, Доска">
+        <div class="col-12 col-sm-6 col-lg-4 col-xxl-2 mb-20">
+          <div class="cost-work">
+            <img src="images/tinting/cost-work{{imageurl}}.png" alt="cost work">
+            {{name}}
+          </div>
+        </div>
+      </for>
+    </div>
+
+    <div class="row mt-40 justify-content-between">
+      <div class="col-5 d-none d-lg-block">
+        <img src="images/tinting/cost-left.png" alt="" class="w-100 border-radius-25">
+      </div>
+      <div class="col-12 col-lg-7">
+        <h1 class="fs36 c-black fw-bold mb-40 text-center text-sm-start">
+          Что входит стоимость тонировки паркета:
+        </h1>
+
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Подготовка пола как для отбеливания древесины, так и для затемнения;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Машинное нанесение тонирующего состава в один слой;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Устранение излишек тонирующего средства;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Полировка пола с последующей уборкой помещения;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Нанесение двухкомпонентного паркетного лака;
+        </p>
+
+
+        <div class="row mt-30 justify-content-center justify-content-sm-start">
+          <div class="col-12 col-sm-4 c-grey fs16 fw-bold text-center text-sm-start">
+            от <span class="fs40">399</span> руб/м2
+          </div>
+          <div class="col-12 col-sm-5 c-black-grey fs16 fw-bold text-center text-sm-start">
+            <span class="fs40 text-line-through">599</span> руб/м2
+            <div class="def-tooltip d-none d-md-block">
+              <img src="images/icons/quotation.png" alt="quotation">
+              <div class="message">
+                Условия красной цены уточняйте
+                у менеджера +7 (4012) 20-12-89
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mt-20">
+          <div class="col-12 col-sm-4 text-center text-sm-start">
+            <button class="btn-grey-large">Оставить заявку расчет</button>
+          </div>
+          <div class="col-12 col-sm-4 mt-20">
+            <h3 class="text-center fs24"><b>или звоните:</b></h3>
+            <div class="tel-block">
+              <div class="d-flex justify-content-center align-items-center mt-2">
+                <img src="images/icons/call.png" alt="Call Icon">
+                <a href="tel:4955055222"><h1 class="fs23 c-black me-2">+7 (495) <b>505-52-22</b></h1></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="mt-99">
+        <component src="components/home/after-before.html"></component>
+      </div>
+
+
+      <div class="row mt-80">
+        <div class="col-12 col-xl-5 mb-5 mb-xl-0">
+          <h1 class="fs30 fs65-md text-center text-md-start">
+            <b>Остерегайтесь</b>
+            <br>
+            мошенников
+          </h1>
+          <h3 class="fs32 c-black fw-bold mt-40 text-center text-md-start">
+            Получите бесплатно инструкцию:
+          </h3>
+          <p class="fs32 c-black mt-2 text-center text-md-start">
+            "ТОП-6 правил как не быть
+            обманутым при заказе тонировки"
+          </p>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4" style="z-index: 1;">
+          <p class="text-center fs21 c-black">
+            Куда вам удобнее отправить?
+          </p>
+          <div class="row justify-content-center mt-20">
+            <div class="col-6 d-flex justify-content-end">
+              <div class="soc-block-calc">
+                <img src="images/icons/whatsup-90.png" alt="" class="w-90">
+                What`s app
+              </div>
+            </div>
+            <div class="col-6  d-flex justify-content-start">
+              <div class="soc-block-calc">
+                <img src="images/icons/tele-90.png" alt="" class="w-90">
+                Telegram
+              </div>
+            </div>
+          </div>
+          <form action="#">
+            <div class="d-flex justify-content-center w-85 m-auto">
+              <input type="text" placeholder="+7 (___)___ - __ - __" data-mask="+7 (000)000 - 00 - 00" class="mt-3 tel-inp bgc-black-grey-length" autocomplete="off" maxlength="21">
+            </div>
+
+            <div class="f-c-c">
+              <button type="submit" class="btn-grey-large mt-20 w-85">
+                Получить инструкцию
+              </button>
+            </div>
+            <label class="fs13 d-flex justify-content-start align-items-start w-85 m-auto mt-4">
+              <label class="def-checkbox d-inline-block">
+                <input type="checkbox">
+                <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+              </label>
+              <span>
+                Нажимая кнопку вы соглашаетесь с условиями <br>
+                <span class="border-bottom-grey c-grey">Политика конфиденциальности</span>
+              </span>
+            </label>
+          </form>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
+          <img src="images/tinting/pdf.png" alt="pdf" class="tinting-pdf">
+        </div>
+      </div>
+
+    </div>
+
+
+    <component src="components/home/our-works.html"
+               props='
+              bottom: <button class="btn-grey-large fs16"> Перейти в портфолио </button></a>;
+            '
+    ></component>
+
+
+
+
+    <div class="row mt-80">
+      <div class="col-7 col-lg-5 m-auto m-lg-0">
+        <img src="images/tinting/tel-whatsup.png" alt="Tel whatsapp" class="w-100">
+      </div>
+      <div class="col-12 col-lg-7">
+        <h1 class="fs30 fs65-md mb-50 mt-5 mt-md-0 text-center text-md-start">
+          <b>Узнайте точную стоимость</b>
+          тонировки
+          паркета прямо сейчас?
+        </h1>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-md-start flex-column flex-md-row align-items-center text-center text-md-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          <b>Нажмите</b> на кнопку ниже;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-md-start flex-column flex-md-row align-items-center text-center text-md-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          <b>Пришлите</b> нам площадь (+фото) на WhatsApp или Telegram;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-md-start flex-column flex-md-row align-items-center text-center text-md-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          ПВ переписке <b>технолог задаст пару вопросов</b> и по ним
+          мы скажем 3 варианта стоимости;
+        </p>
+
+
+        <div class="d-flex justify-content-center justify-content-md-start align-items-center flex-column flex-md-row mt-5">
+          <button class="btn-call-green fs12">
+            <img src="images/icons/whatsup.png" alt="icon WhatsUp" class="me-2">
+            Написать в WhatsApp
+          </button>
+          <span class="mx-2 my-3">
+            или через
+          </span>
+          <a href="#" class="d-flex justify-content-start align-items-center">
+            <img src="images/icons/tele-50.png" alt="Telegram" class="w-50">
+            <span class="tele-text text-nowrap ms-2">
+              в Telegram
+            </span>
+          </a>
+        </div>
+        
+        <div class="d-flex justify-content-center justify-content-md-start align-items-center flex-column flex-md-row fs24 c-black mt-80">
+          <img src="images/tinting/heard.png" alt="Heard" class="me-2 w-80">
+          Если все устроит, <b class="text-center text-md-start">бесплатно выедем к вам на замер.</b>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="mt-80 mb-80">
+      <component src="components/home/reviews-section.html"></component>
+    </div>
+
+    <div>
+      <component src="components/home/discounts-promotions.html"></component>
+    </div>
+
+    <div class="mt-80">
+      <component src="components/home/trust-section.html"></component>
+    </div>
+
+
+
+    <h1 class="fs30 fs35-md text-center mt-80">
+      <b>Часто задаваемые вопросы</b> наших клиентов
+    </h1>
+
+    <div class="tinting-owner-block">
+      <img src="images/tinting/owner.png" alt="Owner" class="tinting-owner-image">
+      <div class="question-body">
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <button class="btn-grey-large mt-5 d-block m-auto">Смотреть все</button>
+      </div>
+    </div>
+
+    <component src="components/home/form-for-call.html"></component>
+
+  </div>
+  <component src="components/home/save-to-tabe.html"></component>
+</div>
+
+<component src="components/footer.html"></component>
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>

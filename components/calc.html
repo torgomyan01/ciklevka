@@ -1,0 +1,367 @@
+<div class="wrapper max-wrapper">
+  <h4 class="fs30 fs48-md text-center c-black mt-6 mt-md-80 mb-50">
+    <b>Рассчитайте стоимость</b> циклевки вашего <br>
+    паркета on-line в трех ценовых вариантах
+  </h4>
+
+
+  <div class="calculate-block">
+    <div class="row justify-content-between">
+      <div class="col-12 col-xl-8 order-2 order-xl-1">
+        <div class="step-loader">
+          <div class="step-loader-body" style="width: 14%"></div>
+          <span class="step-count">Шаг <b id="step-count">1</b> из 7</span>
+        </div>
+        <div class="select__body">
+          <h3 class="text-center fs36 mt-30 mb-20 c-black" id="calc-titles-step">Где требуется циклевка?</h3>
+          <p class="text-center fs16 c-black mt-15" id="subtitle-calc"></p>
+          <div class="select__body__content ">
+
+            <div class="pr-20" id="calc-step1">
+              <div class="row">
+                <for count="9"
+                     data-name="Квартира,Дом,Спортзал,Квартира,Дом,Спортзал,Квартира,Дом,Спортзал"
+                     data-images="1,2,3,1,2,3,1,2,3"
+                >
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <label class="calc__radio" style="background-image: url(images/calc/{{images}}.png)">
+                      <input type="radio" name="wood-working">
+                      <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    </label>
+                    <p class="fs18 c-black mt-20 text-center">{{name}}</p>
+                  </div>
+                </for>
+              </div>
+
+            </div>
+
+            <div class="pr-20 d-none" id="calc-step2">
+              <div class="row mt-50">
+                <div class="col-12 col-md-6 mb-20 mb-md-0">
+                  <div class="">
+                    <h3 class="fs24 text-center mt-100">
+                      Площадь
+                    </h3>
+                    <div class="f-c-c">
+                      <input type="text" class="def-input text-center me-2 c-black-grey fs14 placeholder-c-black-grey" placeholder="Например: 85 м2">
+                      M <sup>2</sup>
+                    </div>
+                  </div>
+                  <p class="fs14 c-black-grey mt-30 text-center">
+                    Введите площадь квартиры, где <br> нужно выполнить циклевку
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="h-450 w-100 border-radius-25 bg-image" style="background-image: url(images/calc/calc-step-2.png)">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pr-20 d-none" id="calc-step3">
+              <div class="row mt-80">
+                <div class="col-12 col-md-6 mb-70">
+                  <label class="label-images" style="background-image: url(images/calc/step3-1.png)">
+
+                    <input type="checkbox">
+                    <span class="check-block">
+                      <span class="check-body">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
+
+                    <span class="title">
+                      Обновить старый пол
+                    </span>
+                  </label>
+                </div>
+                <div class="col-12 col-md-6 mb-70">
+                  <label class="label-images" style="background-image: url(images/calc/step3-2.png)">
+
+                    <input type="checkbox">
+                    <span class="check-block">
+                      <span class="check-body">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
+
+                    <span class="title">
+                      Уложить новый пол
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="pr-20 d-none" id="calc-step4">
+              <div class="row mt-50">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/step4-3.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">Лак </p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/step4-2.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">Масло</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/step4-1.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">Не знаю</p>
+                </div>
+              </div>
+            </div>
+            <div class="pr-20 d-none" id="calc-step5">
+              <div class="row mt-50">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/check.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">Да </p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/close.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">Нет</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label class="calc__radio bg-size-50 bgc-while" style="background-image: url(images/calc/step4-1.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">
+                    Не знаю (хочу <br>
+                    посмотреть образцы)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pr-20 d-none" id="calc-step6">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <label class="calc__radio h-450" style="background-image: url(images/calc/map-input.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">В пределах МКАД</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="calc__radio h-450" style="background-image: url(images/calc/map-out.png)">
+                    <input type="radio" name="wood-working">
+                    <span class="calc_dr__body">
+                        <span class="active__inactive">
+                          <i class="fa-solid fa-check"></i>
+                        </span>
+                      </span>
+                    <img src="images/icons/quotation.png" alt="quotation" class="quotation" title="Your Text">
+                  </label>
+                  <p class="fs18 c-black mt-20 text-center">За МКАДом</p>
+                </div>
+
+                <div class="col-12 f-c-c mt-50 fs18 c-black">
+                  Удаленность от МКАД
+                  <input type="text" class="def-input placeholder-c-black-grey mx-2 w-200 mt-0 " placeholder="Например: 40 км">
+                  <span class="fw-bold">
+                    KM
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="pr-20 d-none" id="calc-step7">
+              <div class="row">
+                <div class="col-12 f-c-c">
+                  <div class="soc-block-calc">
+                    <img src="images/icons/whatsup-90.png" alt="whatsup">
+                    What`s app
+                  </div>
+                  <div class="soc-block-calc">
+                    <img src="images/icons/tele-90.png" alt="whatsup">
+                    Telegram
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-sm-5">
+                      <input type="text" placeholder="+7 (___)___ - __ - __" data-mask="+7 (000)000 - 00 - 00" class="mt-3 tel-inp" autocomplete="off" maxlength="21">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 f-c-c mt-5">
+                  <div class="f-c-c flex-column fs14 c-black me-5 cursor-pointer opacity-25">
+                    <img src="images/icons/reload.png" alt="">
+                    Формирование расчета
+                  </div>
+                  <div class="f-c-c flex-column fs14 c-black cursor-pointer">
+                    <img src="images/icons/check-no-bg.png" alt="">
+                    Расчет готов
+                  </div>
+                </div>
+                <div class="col-12 mb-30">
+                  <div class="row justify-content-center mt-5">
+                    <div class="col-12 col-sm-6">
+                      <button class="btn-grey-large text-uppercase w-100">
+                        Получить расчет
+                        <i class="fa-solid fa-angle-right c-while opacity-25 ms-2"></i>
+                        <i class="fa-solid fa-angle-right c-while opacity-75"></i>
+                        <i class="fa-solid fa-angle-right c-while"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between mt-40">
+            <div class="col-12 col-sm-6 order-2 order-sm-1 d-flex justify-content-center justify-content-sm-start align-items-center align-items-sm-start flex-column flex-sm-row" id="left-message-calc">
+              <img src="images/cursor.png" alt="cursor" class="me-2">
+              <div>
+                <p class="fs16 fw-bold c-black">Нажимайте на вариант ответа</p>
+                <p class="fs16 c-black mt-1">
+                  и переходите к следующему <br>
+                  вопросу чтобы поулить расчет
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 order-1 order-sm-2 d-flex justify-content-center justify-content-sm-end mb-20 mb-sm-0">
+              <button class="btn-while-large text-uppercase me-3 d-none" id="prev-calc-step">назад</button>
+              <button class="btn-grey-large text-uppercase" id="next-calc-step">
+                Далее
+                <i class="fa-solid fa-angle-right c-while opacity-25 ms-2"></i>
+                <i class="fa-solid fa-angle-right c-while opacity-75"></i>
+                <i class="fa-solid fa-angle-right c-while"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-4 order-1 order-xl-2 mb-20 mb-0-xl">
+        <div class="d-flex justify-content-start align-items-start">
+          <img src="images/calc/online-manager.png" alt="manager" class="me-3 w-99">
+          <div class="c-black">
+            <h3 class="fa20 fw-bold mt-20">
+              Михаил
+            </h3>
+            <p class="fs12">Главный инженер компании</p>
+            <p class="mt-6 fs14 fw-bold">
+              Здравствуйте, меня зовут
+              Михаил, и я помогу вам
+              рассчитать стоимость в трех
+              ценовых вариантах с точностью 97%
+            </p>
+          </div>
+        </div>
+
+        <div class="w-100 mt-50 d-none d-xl-block">
+
+          <div class="selected__calc__item active">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Ваш объект
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Площадь
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Основные работы
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Дополнительные работы
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Плинтуса
+          </div>
+          <div class="selected__calc__item">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Срочность
+          </div>
+          <div class="selected__calc__item max">
+            <span class="selected__calc__item__check">
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-question"></i>
+            </span>
+            Расчет
+            стоимости в
+            3х вариантах
+            <img src="images/calc/qount.png" alt="qount" class="mt-80">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

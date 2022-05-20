@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/helper.css">
+
+  <!--  scripts -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+  <title>Циклевка</title>
+</head>
+<body>
+
+<component src="components/header.html" props='
+  headerBody: <component src="components/headers/slipper-header.html"></component>;
+  backgroundUrl: images/tinting/slipper-header-bg.png;
+'></component>
+<component src="components/mobile-menu.html"></component>
+
+
+<div class="wrapper max-wrapper mt-80">
+  <h1 class="fs35 fs65-md text-center">
+    <b>Все дело</b> в подходе
+  </h1>
+
+  <component src="components/home/section-home-skills.html"></component>
+</div>
+
+<component src="components/calc.html"></component>
+
+<div class="wood-map mt-50">
+  <img src="images/tinting/slipper-map.png" alt="Wood Map">
+
+  <div class="map-item" style="left: 15%; top: 80%;">
+    <span class="plus-btn">
+      <i class="fa-regular fa-plus"></i>
+    </span>
+    <div class="text">
+      Выровняем поверхность вашего пола
+    </div>
+  </div>
+
+  <div class="map-item" style="left: 22%; top: 22%;">
+    <span class="plus-btn">
+      <i class="fa-regular fa-plus"></i>
+    </span>
+    <div class="text">
+      Выровняем поверхность вашего пола
+    </div>
+  </div>
+
+  <div class="map-item" style="left: 75%; top: 50%;">
+    <span class="plus-btn">
+      <i class="fa-regular fa-plus"></i>
+    </span>
+    <div class="text">
+      Выровняем поверхность вашего пола
+    </div>
+  </div>
+  <div class="map-item" style="left: 50%; top: 80%;">
+    <span class="plus-btn">
+      <i class="fa-regular fa-plus"></i>
+    </span>
+    <div class="text">
+      Выровняем поверхность вашего пола
+    </div>
+  </div>
+
+  <div class="map-item" style="left: 80%; top: 80%;">
+    <span class="plus-btn">
+      <i class="fa-regular fa-plus"></i>
+    </span>
+    <div class="text">
+      Выровняем поверхность вашего пола
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="product-page">
+  <div class="wrapper max-wrapper mb-50 ">
+
+    <div class="row mt-50">
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="cost-work">
+          <img src="images/tinting/cost-work1.png" alt="cost work">
+          Паркет
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="cost-work">
+          <img src="images/tinting/cost-work1.png" alt="cost work">
+          Паркетная доска
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="cost-work">
+          <img src="images/tinting/cost-work1.png" alt="cost work">
+          Инженерная доска
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-20">
+        <div class="cost-work">
+          <img src="images/tinting/cost-work1.png" alt="cost work">
+          Массивная доска
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-40 justify-content-between">
+      <div class="col-5 d-none d-lg-block">
+        <img src="images/tinting/claer-wood.png" alt="" class="w-100 border-radius-25">
+      </div>
+      <div class="col-12 col-lg-7">
+        <h1 class="fs36 c-black fw-bold mb-40 text-center text-sm-start">
+          Что входит стоимость шлифовки паркета:
+        </h1>
+
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Подготовка пола к покрытию лаком среднего уровня;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Финишная подготовка помещения к покрытию лаком/маслом;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Шлифовка (среднего и высокого уровня) подготовленного пола
+          специальным оборудованием Lagler Trio;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Шлифовка углов помещения и труднодоступных мест среднего
+          и высокого уровня;
+        </p>
+        <p class="fs20 c-black d-flex justify-content-center justify-content-sm-start flex-column flex-sm-row align-items-center text-center text-sm-start">
+          <img src="images/icons/min-check.png" alt="min check" class="w-47">
+          Уборка профессиональным пылесосом
+        </p>
+
+
+        <div class="row mt-30 justify-content-center justify-content-sm-start">
+          <div class="col-12 col-sm-4 c-grey fs16 fw-bold text-center text-sm-start">
+            от <span class="fs40">399</span> руб/м2
+          </div>
+          <div class="col-12 col-sm-5 c-black-grey fs16 fw-bold text-center text-sm-start">
+            <span class="fs40 text-line-through">599</span> руб/м2
+            <div class="def-tooltip d-none d-md-inline-block">
+              <img src="images/icons/quotation.png" alt="quotation">
+              <div class="message">
+                Условия красной цены уточняйте
+                у менеджера +7 (4012) 20-12-89
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mt-20">
+          <div class="col-12 col-sm-4 text-center text-sm-start">
+            <button class="btn-grey-large">Оставить заявку расчет</button>
+          </div>
+          <div class="col-12 col-sm-4 mt-20">
+            <h3 class="text-center fs24"><b>или звоните:</b></h3>
+            <div class="tel-block">
+              <div class="d-flex justify-content-center align-items-center mt-2">
+                <img src="images/icons/call.png" alt="Call Icon">
+                <a href="tel:4955055222"><h1 class="fs23 c-black me-2">+7 (495) <b>505-52-22</b></h1></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <component src="components/home/our-services.html"
+               props='
+                title: <b>Стоимость шлифовки</b> и что входит;
+              '
+    ></component>
+
+
+    <div class="mt-99">
+      <component src="components/home/after-before.html"></component>
+    </div>
+
+    <div class="row mt-80">
+      <div class="col-12 col-xl-5 mb-5 mb-xl-0">
+        <h1 class="fs30 fs65-md text-center text-md-start">
+          <b>Остерегайтесь</b>
+          <br>
+          мошенников
+        </h1>
+        <h3 class="fs32 c-black fw-bold mt-40 text-center text-md-start">
+          Получите бесплатно инструкцию:
+        </h3>
+        <p class="fs32 c-black mt-2 text-center text-md-start">
+          "ТОП-6 правил как не быть
+          обманутым при заказе тонировки"
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4" style="z-index: 1;">
+        <p class="text-center fs21 c-black">
+          Куда вам удобнее отправить?
+        </p>
+        <div class="row justify-content-center mt-20">
+          <div class="col-6 d-flex justify-content-end">
+            <div class="soc-block-calc">
+              <img src="images/icons/whatsup-90.png" alt="" class="w-90">
+              What`s app
+            </div>
+          </div>
+          <div class="col-6  d-flex justify-content-start">
+            <div class="soc-block-calc">
+              <img src="images/icons/tele-90.png" alt="" class="w-90">
+              Telegram
+            </div>
+          </div>
+        </div>
+        <form action="#">
+          <div class="d-flex justify-content-center w-85 m-auto">
+            <input type="text" placeholder="+7 (___)___ - __ - __" data-mask="+7 (000)000 - 00 - 00" class="mt-3 tel-inp bgc-black-grey-length" autocomplete="off" maxlength="21">
+          </div>
+
+          <div class="f-c-c">
+            <button type="submit" class="btn-grey-large mt-20 w-85">
+              Получить инструкцию
+            </button>
+          </div>
+          <label class="fs13 d-flex justify-content-start align-items-start w-85 m-auto mt-4">
+            <label class="def-checkbox d-inline-block">
+              <input type="checkbox">
+              <span class="checking">
+                  <i class="far fa-check"></i>
+                </span>
+            </label>
+            <span>
+                Нажимая кнопку вы соглашаетесь с условиями <br>
+                <span class="border-bottom-grey c-grey">Политика конфиденциальности</span>
+              </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
+        <img src="images/tinting/pdf.png" alt="pdf" class="tinting-pdf">
+      </div>
+
+    </div>
+
+    <component src="components/home/our-works.html"
+               props='
+              bottom: <button class="btn-grey-large fs16"> Перейти в портфолио </button></a>;
+            '
+    ></component>
+
+
+    <h1 class="fs35 fs65 text-center mt-80">
+      <b>Этапы работ</b> и стоимость
+    </h1>
+
+    <div class="row mt-50">
+
+
+      <for count="6"
+           data-imageurl="1,2,3,4,5,6"
+           data-step="01,02,03,04,05,06"
+           data-title="
+            Укладка и выравнивание основания,
+            Укладка фанеры,
+            Циклевка,
+            Тонировка,
+            Шлифовка,
+            Ремонт
+            "
+           data-subtitle="
+            Стяжка и укладка фанеры,
+            Подготовительные работы к обустр,
+            Подготовительные работы к обустройству полов;,
+            Подготовительные работы к обустройству полов;,
+            Подготовительные работы к обустройству полов;,
+            Подготовительные работы к обустройству полов
+            "
+      >
+        <div class="col-12 col-sm-6 col-md-4 mb-70">
+          <div>
+            <div class="d-flex justify-content-start align-items-start">
+            <span class="fs72 c-grey me-2 step-number-works">
+              {{step}}
+            </span>
+              <div>
+                <p class="c-black fs30" style="line-height: 26px;">
+                  <b>
+                    {{title}}
+                  </b>
+                </p>
+                <p class="fs14">{{subtitle}}</p>
+              </div>
+            </div>
+            <div class="h-450 border-radius-25 bg-image" style="background-image: url(images/tinting/work-step-{{imageurl}}.png); margin-top: -25px"> </div>
+          </div>
+        </div>
+      </for>
+
+    </div>
+
+    <div class="input-calc">
+      <div class="fs35 fs65-md text-center">
+        <p><b>Стоимость комплекса работ</b></p>
+        <p>по циклевке паркета с точностью 99%</p>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <label class="fw-bold">
+          <input type="text" value="160" class="input me-2">
+          M<sup>2</sup>
+        </label>
+      </div>
+
+      <input type="range" class="inp-range">
+      <div class="d-flex justify-content-between align-items-center mt-2">
+        <span>
+          10 M<sup>2</sup>
+        </span>
+        <span>
+          1000 M<sup>2</sup>
+        </span>
+      </div>
+
+      <div class="row justify-content-center align-items-end mt-5">
+        <div class="col-12 col-lg-4">
+          <p class="fs24 c-black fw-bold text-center">
+            Под лак:
+            <span class="def-tooltip d-none d-md-inline">
+              <img src="images/icons/quotation.png" alt="quotation">
+              <span class="message">
+                Условия красной цены уточняйте
+                у менеджера +7 (4012) 20-12-89
+              </span>
+            </span>
+          </p>
+          <div class="w-100 border-radius-10 f-c-c fs30 fw-bold bgc-while px-5 py-3 text-nowrap">
+            14 900 руб
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <p class="fs24 c-black fw-bold text-center">
+            Под масло:
+            <span class="def-tooltip d-none d-md-inline">
+              <img src="images/icons/quotation.png" alt="quotation">
+              <span class="message">
+                Условия красной цены уточняйте
+                у менеджера +7 (4012) 20-12-89
+              </span>
+            </span>
+          </p>
+          <div class="w-100 border-radius-10 f-c-c fs30 fw-bold bgc-while px-5 py-3 text-nowrap">
+            14 900 руб
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <p class="fs24 c-black fw-bold text-center">
+            С тонировкой (под масло):
+            <span class="def-tooltip d-none d-md-inline">
+              <img src="images/icons/quotation.png" alt="quotation">
+              <span class="message">
+                Условия красной цены уточняйте
+                у менеджера +7 (4012) 20-12-89
+              </span>
+            </span>
+          </p>
+          <div class="w-100 border-radius-10 f-c-c fs30 fw-bold bgc-while px-5 py-3 text-nowrap">
+            14 900 руб
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <component src="components/landing/contact-block.html"></component>
+
+    <div class="mt-80 mb-80">
+      <component src="components/home/reviews-section.html"></component>
+    </div>
+
+    <div>
+      <component src="components/home/discounts-promotions.html"></component>
+    </div>
+
+    <div class="mt-80">
+      <component src="components/home/trust-section.html"></component>
+    </div>
+
+
+
+    <h1 class="fs30 fs35-md text-center mt-80">
+      <b>Часто задаваемые вопросы</b> наших клиентов
+    </h1>
+
+    <div class="tinting-owner-block">
+      <img src="images/tinting/owner.png" alt="Owner" class="tinting-owner-image">
+      <div class="question-body">
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <div class="question-excerpt">
+
+          <for count="4" data-count="1,2,3,4">
+            <div class="question-item">
+              <div class="title">
+                <div class="d-flex">
+                  <div class="icon">
+                    <i class="fas fa-chevron-down c-grey"></i>
+                  </div>
+                  <b>
+                    Через сколько можно ходить по полу и ставить
+                    мебель?
+                  </b>
+                </div>
+                <span class="count">
+                {{count}}
+              </span>
+              </div>
+              <p class="question-item-body">
+                Если паркет покрывался водным (Loba, Bona, Berger, Forbo), кислотным (Pallmann
+                SH-81) либо НЦ лаком, то мебель можно ставить аккуратно на следующий день,
+                а ходить по паркету можно через 2 часа после нанесения последнего слоя.
+                Если паркет покрывался алкидным, алкидно-уретановым (яхтным) либо
+                полиуретановым лаком, то мебель можно ставить спустя 3 суток, а ходить
+                можно через 6 часов после нанесения последнего слоя лака.
+              </p>
+            </div>
+          </for>
+
+        </div>
+
+        <button class="btn-grey-large mt-5 d-block m-auto">Смотреть все</button>
+      </div>
+    </div>
+
+    <component src="components/home/form-for-call.html"></component>
+
+  </div>
+  <component src="components/home/save-to-tabe.html"></component>
+
+  <div class="wrpper">
+    <component src="components/home/our-services.html"
+               props='
+                title: <b>Тут заголовок для SEO</b> ;
+              '
+    ></component>
+  </div>
+</div>
+
+<component src="components/footer.html"></component>
+
+<!--for component-->
+<script src="js/com.js"></script>
+
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--for my custom script -->
+<script src="js/script.js"></script>
+</body>
+</html>
